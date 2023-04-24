@@ -45,36 +45,57 @@
 #content .btn_box {text-align: center; margin-top: 5rem;}
 #content .btn {display: inline-block; position: relative; font-family: var(--sub-font); font-size: 1.13rem; color: var(--text-color);
   letter-spacing: 50px; padding-left: 50px; padding-bottom: 10px;}
-#content .btn::after {content: ''; display: inline-block; width: 250px; height: 2px; 
+#content .btn::after {content: ''; display: inline-block; width: 250px; height: 2px; transition: all .5s;
   position: absolute; left: 25px; bottom: 0; background: var(--text-color); box-shadow: 0 0 16px 3px;}
+#content .btn_box:hover .btn::after {box-shadow: 0 0 16px 3px #69b3ff;}
 
  /*========== about ==========*/
 
 #about p {padding: 2.5rem 3.13rem; 
   font-family: var(--sub-font); font-size: 1.5rem; 
   line-height: 2em; text-align: justify;}
-#about .about_img ul {display: flex; gap: 3vw; justify-content: space-around;}
+#about .about_img ul {display: flex; gap: 3vw; justify-content: center;}
+#about .about_img li {width: 33.33%; max-width: 460px;}
 #about .about_img img {width: 100%;}
+
+ /*========== shoes_box ==========*/
+
+.shoes_box {
+  height: 55vw; overflow: hidden; position: relative; margin-top: 5rem;
+}
+
+.shoes_box img {
+  width: 80%; position: absolute; top: -30%; left: 10%;
+}
+
+
 
  /*========== character ==========*/
 
 #character .character_img {}
 #character .character_img ul {display: flex; justify-content: space-evenly; gap: 2vw; margin-top: 5rem;}
-#character .character_img li {max-width: 350px;}
+#character .character_img li {width: 25%; max-width: 350px; position: relative;}
 #character .character_img img {width: 100%;}
-#character .character_img ul dl dt {font-size: 2vw; line-height: 2em; text-align: center;}
+#character .character_img dl dt {font-size: 2vw; line-height: 2em; text-align: center;}
+#character .character_img dl dd {font-family: var(--sub-font); font-size: 1.5rem; text-align: center; position: absolute;
+  left: 0; bottom: 40%; opacity: 0;}
+#character .character_img ul:hover li {opacity: .3;}
+#character .character_img ul li:hover {opacity: 1;}
+#character .character_img li:hover dd {opacity: 1;}
+
 
  /*========== trailer ==========*/
 
-#trailer img {width: 100%; object-fit:cover}
 #trailer .main_trailer {display: flex; margin-top: 5rem;}
-#trailer .main_trailer a {width: 50%;}
-#trailer dl {padding: 50px; width: 50%;}
+#trailer .main_trailer a {width: 60%; min-width: 730px;}
+#trailer img {width: 100%; object-fit:cover}
+#trailer dl {padding: 50px; width: 40%;}
 #trailer dt {font-size: 2.5rem; margin-bottom: 70px;}
 #trailer dd, #trailer p {font-family: var(--sub-font); font-size: 1.5rem;}
 #trailer p {padding: 3.13rem; text-align: center;}
 #trailer .sub_trailer {}
 #trailer .sub_trailer ul {display: flex; justify-content: space-around; gap: 3vw;}
+#trailer .sub_trailer li {width: 25%; max-width: 270px;}
 
  /*========== gallery ==========*/
 
@@ -93,7 +114,9 @@
 #gallery ul li:nth-of-type(5) {grid-area: e;}
 #gallery ul li:nth-of-type(6) {grid-area: f;}
 #gallery ul li:nth-of-type(7) {grid-area: g;}
-#gallery ul img {width: 100%; height: 100%; object-fit: cover;}
+#gallery ul img {width: 100%; height: 100%; object-fit: cover; transition: transform 250ms linear;}
+
+
 
 
 /* 일반 pc */
