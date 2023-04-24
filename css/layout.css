@@ -1,28 +1,26 @@
 /* 와이드 pc  */
-
-	
 .videoBox{width:100%;height:100%; overflow:hidden; position:absolute}
 #videoBG {
-   position:fixed; /*고정=>fixed/ 스크롤처리=>absolute */
+   position:absolute; 
    left:50%;
-   top:50%; /*오른쪽, 아래에 여백을 두지않고 꽉차게 표시*/
+   top:50%;
    width:auto;
-   min-width:100%; /*동영상 너비를 꽉차게*/
+   min-width:100%;
    height:auto;
-   min-height:100%; /*동영상 높이를 꽉차게*/
+   min-height:100%; 
   transform:translateX(-50%) translateY(-50%);
-   z-index:-100; /*다른요소보다 아래에 위치*/
+   z-index:-100;
   
 }
 
 #imgBG{
-	position:fixed; /*고정=>fixed/ 스크롤처리=>absolute */
+	position:absolute;
    left:50%;
-   top:50%; /*오른쪽, 아래에 여백을 두지않고 꽉차게 표시*/
+   top:50%;
    width:auto;
-   min-width:100%; /*동영상 너비를 꽉차게*/
+   min-width:100%;
    height:auto;
-   min-height:100%; /*동영상 높이를 꽉차게*/
+   min-height:100%;
   transform:translateX(-50%) translateY(-50%);
    z-index:-100;
    display:none
@@ -31,25 +29,82 @@
 .down{display: block; font-size: 20px; position: absolute; 
 	 left:50%; margin-left: -90px; bottom: 20%;
 	animation:ani 1s infinite  alternate;}
+  
 @keyframes ani {
 	0% { transform:scale(1); opacity:1; color:#fff;}
 	100% { transform:scale(1.2); opacity:0.8; color:#888;}
 }	
-	
 
+#logo_box {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#logo_box img {width: 100%;}
 
-#content{ width:1600px; margin:0 auto; height:3000px; background:rgba(0,0,0,.3);  }
+#content{padding: 0 3.13rem; overflow: hidden; background: var(--back-color); color: var(--text-color);}
+#content h3 {color: var(--point-color); margin-top: 9.38rem;
+  font-size: 3.75rem; font-weight: 400; font-style: italic;}
+
+#content .btn_box {text-align: center; margin-top: 5rem;}
+#content .btn {display: inline-block; position: relative; font-family: var(--sub-font); font-size: 1.13rem; color: var(--text-color);
+  letter-spacing: 50px; padding-left: 50px; padding-bottom: 10px;}
+#content .btn::after {content: ''; display: inline-block; width: 250px; height: 2px; 
+  position: absolute; left: 25px; bottom: 0; background: var(--text-color); box-shadow: 0 0 16px 3px;}
+
+ /*========== about ==========*/
+
+#about p {padding: 2.5rem 3.13rem; 
+  font-family: var(--sub-font); font-size: 1.5rem; 
+  line-height: 2em; text-align: justify;}
+#about .about_img ul {display: flex; gap: 3vw; justify-content: space-around;}
+#about .about_img img {width: 100%;}
+
+ /*========== character ==========*/
+
+#character .character_img {}
+#character .character_img ul {display: flex; justify-content: space-evenly; gap: 2vw; margin-top: 5rem;}
+#character .character_img li {max-width: 350px;}
+#character .character_img img {width: 100%;}
+#character .character_img ul dl dt {font-size: 2vw; line-height: 2em; text-align: center;}
+
+ /*========== trailer ==========*/
+
+#trailer img {width: 100%; object-fit:cover}
+#trailer .main_trailer {display: flex; margin-top: 5rem;}
+#trailer .main_trailer a {width: 50%;}
+#trailer dl {padding: 50px; width: 50%;}
+#trailer dt {font-size: 2.5rem; margin-bottom: 70px;}
+#trailer dd, #trailer p {font-family: var(--sub-font); font-size: 1.5rem;}
+#trailer p {padding: 3.13rem; text-align: center;}
+#trailer .sub_trailer {}
+#trailer .sub_trailer ul {display: flex; justify-content: space-around; gap: 3vw;}
+
+ /*========== gallery ==========*/
+
+#gallery {margin-bottom: 9.38rem;}
+#gallery ul {display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  grid-template-areas: 
+  "a a a"
+  "b c c"
+  "d d g"
+  "e f g";
+  margin-top: 5rem; padding: 0 3.13rem;}
+#gallery ul li:nth-of-type(1) {grid-area: a;}
+#gallery ul li:nth-of-type(2) {grid-area: b;}
+#gallery ul li:nth-of-type(3) {grid-area: c;}
+#gallery ul li:nth-of-type(4) {grid-area: d;}
+#gallery ul li:nth-of-type(5) {grid-area: e;}
+#gallery ul li:nth-of-type(6) {grid-area: f;}
+#gallery ul li:nth-of-type(7) {grid-area: g;}
+#gallery ul img {width: 100%; height: 100%; object-fit: cover;}
 
 
 /* 일반 pc */
 @media screen and (max-width:1280px) {
-	#content{ width:96%; margin:0 2%; }
+	#content{ width:96%; padding:0 2%; }
 }
 
 
 /* 테블릿 */
 @media screen and (max-width:1024px) {
-  #content{ width:auto; margin:0; }
+  /* #content{ width:auto; margin:0; } */
 }
 
 /* 소형 테블릿 */

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+// 스크린
   var screenSize, screenHeight;
   var current=false;
 
@@ -24,14 +24,8 @@ $(document).ready(function() {
 
   screen_size();  //최초 실행시 호출
   
- $(window).resize(function(){    //웹브라우저 크기 조절시 반응하는 이벤트 메소드()
+ $(window).resize(function(){ 
       screen_size();
   }); 
-  
-  $('.down').click(function(){
-      screenHeight = $(window).height();
-      $('html,body').animate({'scrollTop':screenHeight}, 1000);
-  });
-  
-  
-});
+
+

@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  /*========== Colors ==========*/
+  --back-color: #0a1239;
+  --text-color: #fff;
+  --point-color: #c9a55c;
+
+  /*========== Font and typography ==========*/
+  --main-font: 'Playfair Display', serif;
+  --sub-font: 'Lato', sans-serif;
+
+}
+
 /* Reset CSS  */
 * { margin:0; padding:0; border:0; outline:0; vertical-align:top;
 -webkit-text-size-adjust:none;  }
@@ -5,7 +19,7 @@ html, body {font-family:'돋움', Dotum; font-size:16px; color:#333;}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
 ul, ol, dl { list-style:none; }
 img, video {border:0; vertical-align:top; }
-a, a:link {color:#333;text-decoration:none; }
+a, a:link {color:#333;text-decoration:none; display: block; }
 a:visited { color:#333; }
 a:hover, a:active {color:#333;text-decoration:none; }
 table { border-collapse:collapse; border-spacing:0; }
@@ -17,22 +31,29 @@ p,li,dd{ line-height:1.5em}
 .hidden, #skipNav{display: block; position: absolute; left:-1000%; top:0; width: 1px; height: 1px;
     overflow: hidden; color: #fff;}
 
-/* 헤더 공통 영역 */
-#wrap{width:100%; overflow: hidden}
-#headerArea{position:fixed; z-index: 30; height: 80px;
-    background: rgba(0,0,0,.8); left:0; top: 0;
-    width: 100%}	
-#headerArea	.headerInner{width: 90%; margin: 0 5%;
-     overflow: hidden}
-#headerArea h1{ float: left; margin-top: 15px}
-#headerArea h1 a{color: #fff; text-decoration: none}	
-#headerArea #gnb{float: right;margin-top: 25px}
-#headerArea #gnb ul{overflow: hidden}
-#headerArea #gnb ul li{float: left; margin-right: 15px;}
-#headerArea #gnb ul li a{color: #fff; text-decoration: none}
+/* 전체 공통 */
+#wrap{width:100%; overflow: hidden; font-family:'Playfair Display', serif;}
 
+/* 헤더 공통 영역 */
+#headerArea{position:fixed; z-index: 30; height: 130px; left:0; top: 0; width: 100%}	
+#headerArea	.headerInner{width: 90%; margin: 0 5%; overflow: hidden}
+
+#headerArea h1 {float: left;}
+#headerArea h1 a {text-indent: -999px; width: 255px; height: 81px; margin-top: 30px;
+  background: url(../images/cindy_logo_header.png);}
+#headerArea #gnb {float: right;}
+#headerArea #gnb ul {display: flex; gap: 70px;}
+#headerArea #gnb ul li {}
+#headerArea #gnb ul a {color: var(--point-color); font-size: 1.88rem; line-height: 130px;}
 
 /* 푸터 공통 영역 */
+#footerArea::before {content: ''; display: block; position: absolute; left: 50%; bottom: 50%;
+  border-radius: 50%; transform: translate(-50%); width: 250px; height: 250px; 
+  background: url(../images/cindy_logo_footer.png) no-repeat 50% 75% var(--back-color);}
+#footerArea {position: relative; height: 250px; padding: 0 3.13rem; overflow: hidden; font-family: var(--sub-font); background: var(--point-color);}
+#footerArea ul {display: flex; justify-content: center; flex-wrap: wrap; column-gap: 30px; margin: 140px 0 10px;}
+#footerArea ul a {font-weight: 600;}
+#footerArea p { text-align: center; margin-bottom: 2.5rem;}
 
 
 /* 일반 pc */

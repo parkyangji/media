@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>반응형웹</title>
+<title>Cinderella</title>
 <link rel="shortcut icon"  type="image/x-icon"  href="./favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="./app_icon.png">
 <link rel="apple-touch-startup-image" href="./startup.png">
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 <link rel="stylesheet" href="./css/common.css">
 <link rel="stylesheet" href="./css/layout.css">
 
+<script src="https://kit.fontawesome.com/b0822c7a94.js" crossorigin="anonymous"></script>
 <script src="./js/prefixfree.min.js"></script>
 <script>
 	// <![CDATA[
@@ -25,44 +26,147 @@
 </head>
 
 <body>
-   <div id="skipNav">
-	   <a href="#content">본문바로가기</a>
-	   <a href="#gnb">네비게이션바로가기</a>
-   </div>
-   <div id="wrap">
-	<div class="videoBox">
-		    <video autoplay loop muted id="videoBG"></video>
-			<img src="images/back.jpg" id="imgBG">
-			
-			<a class="down" href="#">SCROLL DOWN</a>
-	</div>
-	
+<div id="skipNav">
+  <a href="#content">본문바로가기</a>
+  <a href="#gnb">네비게이션바로가기</a>
+</div>
+<div id="wrap">
+  <div class="videoBox">
+      <video autoplay loop muted id="videoBG"></video>
+      <img src="images/back.jpg" id="imgBG">
+      <div id="logo_box">
+        <img src="./images/cindy_logo.png" alt="">
+      </div>
+      <a class="down" href="#">SCROLL DOWN</a>
+  </div>
 	<header id="headerArea">
 	  <div class="headerInner">
-		  <h1><a href="#">로고</a></h1>
+		  <h1 class="hidden"><a href="./index.html">Cinderella</a></h1>
 		  <nav id="gnb">
-			<h2 class="hidden">네비게이션영역</h2> 
+			<h2 class="hidden">Navigation Area</h2> 
 		  	 <ul>
-		  	 	<li><h3><a href="#">menu01</a></h3></li>
-		  	 	<li><h3><a href="#">menu02</a></h3></li>
-		  	 	<li><h3><a href="#">menu03</a></h3></li>
-		  	 	<li><h3><a href="#">menu04</a></h3></li>
+		  	 	<li><h3><a href="#">about</a></h3></li>
+		  	 	<li><h3><a href="#">character</a></h3></li>
+		  	 	<li><h3><a href="#">trailer</a></h3></li>
+		  	 	<li><h3><a href="#">gallery</a></h3></li>
 		  	 </ul>
 		  </nav>
 		</div>
 	</header>
-	
 	<article id="content">
-		<h2 class="hidden">본문콘텐츠영역</h2>
-			내용 콘텐츠
+		<h2 class="hidden">Body Contents Area</h2>
+		<section id="about">
+      <h3>about</h3>
+      <p>Ella, the kindhearted daughter of a wealthy merchant, lives happily with her parents, until her mother falls ill and dies. On her deathbed, she asks her daughter to always have courage and be kind. Years later, Ella's father marries the widowed Lady Tremaine, who, along with her own two daughters, Drisella and Anastasia, moves into his house. When he leaves on business, Lady Tremaine reveals her cruel and jealous nature, forcing Ella to give up her bedroom to the stepsisters and move into the attic. During his trip, Ella's father unexpectedly dies, and Lady Tremaine dismisses the household staff to save money, forcing all the chores upon her stepdaughter. Seeing her face covered in cinders after sleeping by the fireplace, Ella's stepfamily mockingly dubs her "Cinderella".</p>
+      <div class="about_img">
+        <ul>
+          <li><img src="./images/index_a_01.jpg" alt=""></li>
+          <li><img src="./images/index_a_02.jpg" alt=""></li>
+          <li><img src="./images/index_a_03.jpg" alt=""></li>
+        </ul>
+      </div>
+      <div class="btn_box">
+        <a href="#" class="btn">MORE</a>
+      </div>
+    </section>
+    <div class="shoes_box">
+      <img src="./images/index_back.jpg" alt="">
+    </div>
+    <section id="character">
+      <h3>character</h3>
+      <div class="character_img">
+        <ul>
+          <li>
+            <img src="./images/index_c_01.jpg" alt="">
+            <dl>
+              <dt>Ella</dt>
+              <dd>a strong-willed and kind-hearted young woman</dd>
+            </dl>
+          </li>
+          <li>
+            <img src="./images/index_c_02.jpg" alt="">
+            <dl>
+              <dt>Kit</dt>
+              <dd>a humble and noble soon-to-be king</dd>
+            </dl>
+          </li>
+          <li>
+            <img src="./images/index_c_03.jpg" alt="">
+            <dl>
+              <dt>Lady Tremaine</dt>
+              <dd>Ella's bitter and broken stepmother</dd>
+            </dl>
+          </li>
+          <li>
+            <img src="./images/index_c_04.jpg" alt="">
+            <dl>
+              <dt>Fairy Godmother</dt>
+              <dd>a ditzy yet caring sorceress who helps Ella get to the ball</dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+      <div class="btn_box">
+        <a href="#" class="btn">MORE</a>
+      </div>
+    </section>
+    <section id="trailer">
+      <h3>trailer</h3>
+      <div class="main_trailer">
+        <a href="#"><img src="./images/index.t_01.jpg" alt=""></a>
+        <dl>
+          <dt>Cinderella Official Trailer</dt>
+          <dd>A new Frozen short, Frozen Fever, featuring all of your favorite characters and a brand new song, will play in theatres with Cinderella beginning March 13!</dd>
+        </dl>
+      </div>
+      <p>A live-action feature inspired by the classic fairy tale, “Cinderella” brings to life the timeless images from Disney’s 1950 animated masterpiece as fully-realized characters in a visually-dazzling spectacle for a whole new generation.</p>
+      <div class="sub_trailer">
+        <ul>
+          <li><a href="#"><img src="./images/index_t_02.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./images/index_t_03.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./images/index_t_04.jpg" alt=""></a></li>
+          <li><a href="#"><img src="./images/index_t_05.jpg" alt=""></a></li>
+        </ul>
+      </div>
+      <div class="btn_box">
+        <a href="#" class="btn">MORE</a>
+      </div>
+    </section>
+    <section id="gallery">
+      <h3>gallery</h3>
+      <ul>
+        <li><img src="./images/index_g_01.jpg" alt=""></li>
+        <li><img src="./images/index_g_02.jpg" alt=""></li>
+        <li><img src="./images/index_g_03.jpg" alt=""></li>
+        <li><img src="./images/index_g_04.jpg" alt=""></li>
+        <li><img src="./images/index_g_05.jpg" alt=""></li>
+        <li><img src="./images/index_g_06.jpg" alt=""></li>
+        <li><img src="./images/index_g_07.jpg" alt=""></li>
+      </ul>
+      <div class="btn_box">
+        <a href="#" class="btn">MORE</a>
+      </div>
+    </section>
 	</article>
-	
 	<footer id="footerArea">
-	    푸터 콘텐츠
+	    <ul>
+        <li><a href="#">About Disney</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Do Not Sell or Share My Personal Information</a></li>
+        <li><a href="#">Legal Notices</a></li>
+        <li><a href="#">Your California Privacy Rights</a></li>
+        <li><a href="#">Interest-based Ads </a></li>
+        <li><a href="#">Children's Online Privacy Policy</a></li>
+      </ul>
+      <p>© Disney © Disney•Pixar © & ™ Lucasfilm LTD © Marvel. All Rights Reserved.</p>
 	</footer>
 </div>		
 <script src="./js/jquery-1.12.4.min.js"></script>
 <script src="./js/jquery-migrate-1.4.1.min.js"></script>
 <script src="./js/video.js"></script>
+<script src="./js/common.js"></script>
 </body>
 </html>
