@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
+/* root  */
 :root {
   /*========== Colors ==========*/
   --back-color: #0a1239;
@@ -14,71 +15,305 @@
 }
 
 /* Reset CSS  */
-* { margin:0; padding:0; border:0; outline:0; vertical-align:top;
--webkit-text-size-adjust:none;  }
-html, body {font-family:'돋움', Dotum; font-size:16px; color:#333;}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
-ul, ol, dl { list-style:none; }
-img, video {border:0; vertical-align:top; }
-a, a:link {color:#333;text-decoration:none; display: block; }
-a:visited { color:#333; }
-a:hover, a:active {color:#333;text-decoration:none; }
-table { border-collapse:collapse; border-spacing:0; }
-input, select { vertical-align:middle; }
-label { cursor:pointer; }
-.blind,legend,hr,caption { display:block; overflow:hidden; position:absolute; top:0; left:-1000em; }
-i,em,address { font-style:normal; font-weight:normal; }
-p,li,dd{ line-height:1.5em}
-.hidden, #skipNav{display: block; position: absolute; left:-1000%; top:0; width: 1px; height: 1px;
-    overflow: hidden; color: #fff;}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: top;
+  -webkit-text-size-adjust: none;
+}
+
+html,
+body {
+  font-family: '돋움', Dotum;
+  font-size: 16px;
+  color: #333;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul,
+ol,
+dl {
+  list-style: none;
+}
+
+img,
+video {
+  border: 0;
+  vertical-align: top;
+}
+
+a,
+a:link {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+a:visited {
+  color: #333;
+}
+
+a:hover,
+a:active {
+  color: #333;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+label {
+  cursor: pointer;
+}
+
+.blind,
+legend,
+hr,
+caption {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: -1000em;
+}
+
+i,
+em,
+address {
+  font-style: normal;
+  font-weight: normal;
+}
+
+p,
+li,
+dd {
+  line-height: 1.5em
+}
+
+.hidden,
+#skipNav {
+  display: block;
+  position: absolute;
+  left: -1000%;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* animation */
+
+@keyframes ani {
+  0% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+
+  25% {
+    top: 0;
+    left: 5px;
+  }
+
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+
+  50% {
+    top: 5px;
+    left: 0;
+  }
+
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+
+  75% {
+    top: 0;
+    left: -5px;
+  }
+
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+
+
 
 /* 전체 공통 */
-#wrap{width:100%; overflow: hidden; font-family:'Playfair Display', serif;}
+#wrap {
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif;
+}
 
 /* 헤더 공통 영역 */
-#headerArea{position:fixed; z-index: 30; height: 130px; left:0; top: 0; width: 100%}	
-#headerArea	.headerInner{width: 90%; margin: 0 5%; overflow: hidden}
+#headerArea {
+  position: fixed;
+  z-index: 30;
+  height: 130px;
+  left: 0;
+  top: 0;
+  width: 100%
+}
 
-#headerArea h1 {float: left;}
-#headerArea h1 a {text-indent: -999px; width: 255px; height: 81px; margin-top: 30px;
-  background: url(../images/cindy_logo_header.png);}
-#headerArea #gnb {float: right;}
-#headerArea #gnb ul {display: flex; gap: 70px;}
+#headerArea .headerInner {
+  width: 90%;
+  margin: 0 5%;
+  overflow: hidden
+}
+
+#headerArea h1 {
+  float: left;
+}
+
+#headerArea h1 a {
+  text-indent: -999px;
+  width: 255px;
+  height: 81px;
+  margin-top: 30px;
+  background: url(../images/cindy_logo_header.png);
+}
+
+#headerArea #gnb {
+  float: right;
+}
+
+#headerArea #gnb ul {
+  display: flex;
+  gap: 70px;
+}
+
 #headerArea #gnb ul li {}
-#headerArea #gnb ul a {color: var(--point-color); font-size: 1.88rem; line-height: 130px;}
+
+#headerArea #gnb ul a {
+  color: var(--point-color);
+  font-size: 1.88em;
+  line-height: 130px;
+}
 
 /* 푸터 공통 영역 */
-#footerArea {position: relative; height: 250px; padding: 0 3.13rem; overflow: hidden; font-family: var(--sub-font); background: var(--point-color);}
-#footerArea ul {display: flex; justify-content: center; flex-wrap: wrap; column-gap: 30px; margin: 140px 0 10px;}
-#footerArea ul li a {font-weight: 600;}
-#footerArea p { text-align: center; margin-bottom: 2.5rem;}
+#footerArea {
+  position: relative;
+  height: 250px;
+  padding: 0 3.13rem;
+  overflow: hidden;
+  font-family: var(--sub-font);
+  background: var(--point-color);
+}
 
-.topMove {position: absolute; left: 50%; bottom: 50%;
-  border-radius: 50%; transform: translate(-50%); width: 250px; height: 250px; cursor: pointer;
-  background: url(../images/cindy_logo_footer.png) no-repeat 50% 80% var(--back-color);}
+#footerArea ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  margin: 140px 0 10px;
+}
+
+#footerArea ul li a {
+  font-weight: 600;
+}
+
+#footerArea p {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.topMove {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  border-radius: 50%;
+  transform: translate(-50%);
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  background: url(../images/cindy_logo_footer.png) no-repeat 50% 80% var(--back-color);
+}
 
 
 /* 일반 pc */
 @media screen and (max-width:1280px) {
-	
+
 }
 
 /* 테블릿 */
 @media screen and (max-width:1024px) {
-	
+
+body{font-size: 14px;}
+
+#headerArea {
+  height: 80px;
+}
+
+#headerArea h1 a {
+  background-repeat: no-repeat;
+  background-size: 70%;
+  margin-top: 15px;
+}
+
 }
 
 /* 소형 테블릿 */
 @media screen and (max-width:768px) {
-	
+
 }
 
 /* 모바일 */
 @media screen and (max-width:640px) {
-	
+
 }
 
 /* 최소 사이즈 처리 */
 @media screen and (max-width:480px) {
-	#wrap { min-width:320px; }
+  #wrap {
+    min-width: 320px;
+  }
 }

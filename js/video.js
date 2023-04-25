@@ -8,13 +8,13 @@
 
       $("#content").css('margin-top',screenHeight);
       
-      if( screenSize > 768 && current==false){
+      if( screenSize > 1024 && current==false){
           $("#videoBG").show();
           $("#videoBG").attr('src','./images/back.mp4');
           $("#imgBG").hide();
           current=true;
         }
-      if(screenSize <= 768){
+      if(screenSize <= 1024){
           $("#videoBG").hide();
           $("#videoBG").attr('src','');
           $("#imgBG").show();

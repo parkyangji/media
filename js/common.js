@@ -9,6 +9,8 @@ $('.scrollDown').click(function(){
 
 $(window).on('scroll', function() {
   screenHeight = $(window).height();
+  screenSize = $(window).width();
+
   let scroll = $(window).scrollTop();
 
   if (scroll >= screenHeight) {
