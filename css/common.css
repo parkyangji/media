@@ -5,6 +5,7 @@
   --back-color: #0a1239;
   --text-color: #fff;
   --point-color: #c9a55c;
+  --ligth-color: #4cc4e9;
 
   /*========== Font and typography ==========*/
   --main-font: 'Playfair Display', serif;
@@ -47,13 +48,14 @@ p,li,dd{ line-height:1.5em}
 #headerArea #gnb ul a {color: var(--point-color); font-size: 1.88rem; line-height: 130px;}
 
 /* 푸터 공통 영역 */
-#footerArea::before {content: ''; display: block; position: absolute; left: 50%; bottom: 50%;
-  border-radius: 50%; transform: translate(-50%); width: 250px; height: 250px; 
-  background: url(../images/cindy_logo_footer.png) no-repeat 50% 75% var(--back-color);}
 #footerArea {position: relative; height: 250px; padding: 0 3.13rem; overflow: hidden; font-family: var(--sub-font); background: var(--point-color);}
 #footerArea ul {display: flex; justify-content: center; flex-wrap: wrap; column-gap: 30px; margin: 140px 0 10px;}
-#footerArea ul a {font-weight: 600;}
+#footerArea ul li a {font-weight: 600;}
 #footerArea p { text-align: center; margin-bottom: 2.5rem;}
+
+.topMove {position: absolute; left: 50%; bottom: 50%;
+  border-radius: 50%; transform: translate(-50%); width: 250px; height: 250px; cursor: pointer;
+  background: url(../images/cindy_logo_footer.png) no-repeat 50% 80% var(--back-color);}
 
 
 /* 일반 pc */

@@ -1,6 +1,6 @@
 // 스크롤 다운
   
-$('.down').click(function(){
+$('.scrollDown').click(function(){
   screenHeight = $(window).height();
   $('html,body').animate({'scrollTop':screenHeight}, 1000);
 });
@@ -19,3 +19,9 @@ $(window).on('scroll', function() {
     $('#headerArea h1').addClass('hidden');
   }
 })
+
+// 상단 이동
+$('.topMove').click(function(e){
+  e.preventDefault(); 
+  $("html,body").stop().animate({"scrollTop":0},1000);
+});
