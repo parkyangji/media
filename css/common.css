@@ -239,6 +239,24 @@ dd {
   line-height: 130px;
 }
 
+	/* 햄버거메뉴 */
+
+#headerArea .menuOn{display: none; position:absolute; right: 0; top: 0; width: 80px; height: 80px; font-size:0; text-indent:-9999%; z-index:99;}
+#headerArea .menuOn span{position:absolute; left: 50%; top: 50%; margin:-1px 0 0 -15px; display: block; width: 30px; height: 2px; background:#fff;}
+#headerArea .menuOn span::before,
+#headerArea .menuOn span::after{content:''; position:absolute; left:0; display: block; width: 30px; height: 2px; background:#fff; transition:transform .3s;}
+#headerArea .menuOn span::before{top: 9px;}
+#headerArea .menuOn span::after{top: -9px;}
+#headerArea.active .menuOpen span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+#headerArea.active .menuOpen span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+
 /* 푸터 공통 영역 */
 #footerArea {
   position: relative;
@@ -263,7 +281,6 @@ dd {
 
 #footerArea p {
   text-align: center;
-  margin-bottom: 2.5rem;
 }
 
 .topMove {
@@ -289,6 +306,8 @@ dd {
 
 body{font-size: 14px;}
 
+#headerArea .menuOn{display: block;}
+
 #headerArea {
   height: 80px;
 }
@@ -299,6 +318,30 @@ body{font-size: 14px;}
   margin-top: 15px;
 }
 
+
+#headerArea #gnb {
+  display: none;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background: var(--text-color);
+}
+
+#headerArea #gnb ul {
+  display: block;
+  position: fixed;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+
+#headerArea #gnb ul a {
+  font-size: 3rem;
+}
+
+
 }
 
 /* 소형 테블릿 */
@@ -308,6 +351,30 @@ body{font-size: 14px;}
 
 /* 모바일 */
 @media screen and (max-width:640px) {
+  .topMove {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    bottom: initial;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 130px;
+    color: #fff !important;
+    background: var(--back-color);
+  }
+
+  #footerArea ul{
+    display: none;
+  }
+
+  #footerArea {
+    height: 130px;
+  }
+
+  #footerArea p {
+    margin-top: 4rem;
+  }
 
 }
 
