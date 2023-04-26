@@ -1,75 +1,4 @@
 /* 와이드 pc  */
-.videoBox {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute
-}
-
-#videoBG {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: auto;
-  min-width: 100%;
-  height: auto;
-  min-height: 100%;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: -100;
-
-}
-
-#imgBG {
-  position: absolute;
-  right: -10%;
-  top: 0;
-  width: auto;
-  min-width: 100%;
-  height: auto;
-  min-height: 100%;
-  z-index: -100;
-  display: none
-}
-
-.scrollDown {
-  display: block;
-  border: 2px solid #fff;
-  border-radius: 5000px;
-  box-sizing: border-box;
-  position: absolute;
-  font-size: 1.125em;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10%;
-  width: 40px;
-  height: 60px;
-}
-
-.scrollDown::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  width: 6px;
-  height: 6px;
-  left: 50%;
-  margin-left: -3px;
-  background: #fff;
-  animation: ani 1s ease-in-out infinite backwards;
-  transition: all 0.3s ease-in-out;
-  border-radius: 50%;
-}
-
-.scrollDown span {
-  position: absolute;
-  bottom: -40px;
-  left: 50%;
-  margin-left: -61px;
-  white-space: nowrap;
-  animation: ani 1s ease-in-out infinite backwards;
-  transition: all 0.3s ease-in-out;
-  color: #fff;
-  font-family: var(--sub-font);
-}
 
 #logo_box {
   position: absolute;
@@ -383,6 +312,10 @@
   padding: 0 2%;
 }
 
+#headerArea #gnb ul a {
+  font-size: 1.6em;
+}
+
 }
 
 
@@ -405,7 +338,7 @@
 }
 
 .shoes_box {
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 
@@ -617,9 +550,6 @@
   margin-top: 1.5rem;
 }
 
-.shoes_box {
-  margin-top: 1.5rem;
-}
 
 /*========== about ==========*/
 

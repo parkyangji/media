@@ -1,0 +1,19 @@
+#imgBG {
+  display: block;
+  left: 50%;
+  top: 50%;
+  right: inherit;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#content {
+  position: relative;
+}
+
+#content h2 {
+  position: absolute;
+  top: -500px;
+  left: 0;
+  width: 100%;
+  color: var(--text-color);
+}

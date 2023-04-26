@@ -13,13 +13,25 @@ $(window).on('scroll', function() {
 
   let scroll = $(window).scrollTop();
 
-  if (scroll >= screenHeight) {
-    $('#headerArea').css('background-color', 'var(--back-color)');
-    $('#headerArea h1').removeClass('hidden');
+  if (screenSize > 1024) {
+
+    if (scroll >= screenHeight) {
+      $('#headerArea').css('background-color', 'var(--back-color)');
+      $('#headerArea h1').show();
+    } else if (scroll < screenHeight){
+      $('#headerArea').css('background-color', 'transparent');
+      $('#headerArea h1').hide();
+    }
+
   } else {
-    $('#headerArea').css('background-color', 'transparent');
-    $('#headerArea h1').addClass('hidden');
+    if (scroll >= screenHeight) {
+      $('#headerArea').css('background-color', 'var(--back-color)');
+    } else if (scroll < screenHeight){
+      $('#headerArea').css('background-color', 'transparent');
+    }
   }
+
+
 })
 
 // 상단 이동
@@ -27,3 +39,10 @@ $('.topMove').click(function(e){
   e.preventDefault(); 
   $("html,body").stop().animate({"scrollTop":0},1000);
 });
+
+
+// 네비
+$('.menuOn').click(function(e){
+  e.preventDefault();
+  $('#headerArea').toggleClass('active');
+})
