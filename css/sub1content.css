@@ -1,19 +1,75 @@
+/* 와이드 pc  */
 #imgBG {
   display: block;
   left: 50%;
-  top: 50%;
   right: inherit;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%);
 }
 
 #content {
   position: relative;
+  padding: 0 3.13rem;
+  background: var(--back-color);
+  color: var(--text-color);
 }
 
 #content h2 {
   position: absolute;
-  top: -500px;
+  text-align: center;
+  top: -600px;
   left: 0;
   width: 100%;
-  color: var(--text-color);
+  color: var(--point-color);
+  font-size: 8vw;
+  text-shadow: 6px 4px #000;
 }
+
+/*========== story ==========*/
+
+#story_box {
+  display: flex;
+}
+
+#story .text_box {
+  width: 50%;
+  font-family: var(--sub-font);
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+#story .img_box {
+  width: 50%;
+  height: 100%;
+}
+
+#story .img_box img {
+  width: 100%;
+}
+
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+
+  #content {
+    width: 96%;
+    padding: 0 2%;
+  }
+  
+}
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+  
+  #content{ width:auto; margin:0; }
+  
+}  
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+}
+
+
