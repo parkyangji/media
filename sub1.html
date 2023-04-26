@@ -58,12 +58,8 @@
     </header>
     <article id="content">
       <h2>about</h2>
-      <section id="story">
-        <h3>story</h3>
-        <div id="story_1">
-          <div class="img_box">
-            <img src="./images/sub1_1.jpg" alt="">
-          </div>
+      <section id="story_1">
+        <div id="story_box">
           <div class="text_box">
             <p>
               Ella, the kindhearted daughter of a wealthy merchant, lives happily with her parents, until her mother falls
@@ -76,22 +72,26 @@
               <strong>Ella'sstepfamily mockingly dubs her "Cinderella".</strong>
             </p>
           </div>
-        </div>
-        <div id="story_2">
           <div class="img_box">
             <img src="./images/sub1_1.jpg" alt="">
           </div>
+        </div>
+      </section>
+      <section id="story_2">
+        <div id="story_box">
           <div class="text_box">
             <p>
               Distraught by her stepfamily's mistreatment of her, Ella rides off into the woods, where <strong>she meets Kit</strong>, thecrown prince, who introduces himself as a palace apprentice. They take a liking to each other, but part without him learning her name. Later, hoping to see Ella again, Kit persuades his terminally ill father, who urges him to marry a princess, to invite all the inhabitants of the kingdom, including every eligible
               maiden, to the upcoming royal ball.
             </p>
           </div>
-        </div>
-        <div id="story_3">
           <div class="img_box">
             <img src="./images/sub1_1.jpg" alt="">
           </div>
+        </div>
+      </section>
+      <section id="story_3">
+        <div id="story_box">
           <div class="text_box">
             <p>
               On the night of the ball, Ella, also wanting to meet Kit again, attempts to join her stepfamily wearing a
@@ -99,22 +99,26 @@
               tears, <strong>Ella meets an old beggar woman, who reveals herself to be her fairy godmother</strong>, and magically transforms a pumpkin into a carriage, mice into horses, lizards into footmen, and a goose into the coachman. She then turns Ella's ripped dress into an exquisite ball gown, and <strong>gives her a pair of glass slippers.</strong> As Ella departs, the Fairy Godmother warns her the magic will end at the last stroke of midnight, and casts a final spell to prevent Ella's stepfamily from recognizing her.
             </p>
           </div>
-        </div>
-        <div id="story_4">
           <div class="img_box">
             <img src="./images/sub1_1.jpg" alt="">
           </div>
+        </div>
+      </section>
+      <section id="story_4">
+        <div id="story_box">
           <div class="text_box">
             <p>
               <strong>At the ball</strong>, Kit is delighted to see Ella and gives her the first dance, to the displeasure of the Grand Duke, who wants him to marry Princess Chelina of Zaragoza for political reasons. Although surprised at his true identity, Ella bonds with Kit, but before she can tell him her name, the clock chimes midnight and she flees the palace, losing one of her glass slippers. The Grand Duke pursues her, but Ella manages to break
               away right before the magic dissipates. Upon returning home, <strong>she hides the remaining glass slipper</strong> under the floorboards.
             </p>
           </div>
-        </div>
-        <div id="story_5">
           <div class="img_box">
             <img src="./images/sub1_1.jpg" alt="">
           </div>
+        </div>
+      </section>
+      <section id="story_5">
+        <div id="story_box">
           <div class="text_box">
             <p>
               Kit orders the Grand Duke and the Captain of the Guard to <strong> the “mystery
@@ -125,6 +129,10 @@
               her mother years ago.
             </p>
           </div>
+          <div class="img_box">
+            <img src="./images/sub1_1.jpg" alt="">
+          </div>
+          
         </div>
       </section>
     </article>
@@ -147,6 +155,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 <script>
+
+  // https://www.thecodecreative.com/blog/gsap-scrolltrigger-text-animation-highlighting-text
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray("strong").forEach((strong) => {
+  ScrollTrigger.create({
+    trigger: strong,
+    start: "top center",
+    markers: true, // 표시
+    onEnter: () => strong.classList.add("highlight"), //한번만 실행
+  });
+});
 
 </script>
 </body>
