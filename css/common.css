@@ -232,7 +232,6 @@ dd {
   gap: 70px;
 }
 
-#headerArea #gnb ul li {}
 
 #headerArea #gnb ul a {
   color: var(--point-color);
@@ -359,7 +358,6 @@ dd {
   min-height: 100%;
   transform: translateX(-50%) translateY(-50%);
   z-index: -100;
-
 }
 
 #imgBG {
@@ -389,7 +387,7 @@ dd {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: 30px;
+  column-gap: 20px;
   margin: 140px 0 10px;
 }
 
@@ -416,6 +414,9 @@ dd {
 
 /* 일반 pc */
 @media screen and (max-width:1280px) {
+  #headerArea #gnb ul a {
+    font-size: 1.6em;
+  }
 
 }
 
