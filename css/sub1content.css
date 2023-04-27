@@ -8,10 +8,9 @@
 
 #content {
   position: relative;
-  padding: 0 3.13rem;
+  padding: 0;
   background: var(--back-color);
   color: var(--text-color);
-  padding-top: 130px
 }
 
 #content h2 {
@@ -28,56 +27,82 @@
 #content h3 {
   color: var(--point-color);
   margin-top: 9.38rem;
+  margin-bottom: 3.13rem;
   font-size: 3.75rem;
   font-weight: 400;
   font-style: italic;
+  text-align: center;
 }
 
 /*========== story ==========*/
 
-
-#story_box {
-  display: flex;
+#story_1, #story_2, #story_3, #story_4, #story_5 {
+  overflow: hidden;
   height: 100vh;
-  align-items: center;
-  text-align: justify;
+  background-color: var(--back-color);
+  /* padding-bottom: 50vw; */
 }
 
-#story_2 #story_box, #story_4 #story_box {
+#story_1 {background-color: rgb(61, 35, 10);}
+#story_2 {background-color: rgb(74, 88, 34)}
+#story_3 {background-color: rgb(97, 60, 9)}
+#story_4 {background-color:rgb(37, 57, 92)}
+#story_5 {background-color: rgb(36, 44, 30)}
+
+
+.story_box {
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  justify-content: flex-end
+}
+
+
+#story_2 .story_box, #story_4 .story_box {
   flex-direction: row-reverse;
 }
 
-#story_box .text_box {
-  width: 70%;
+
+#story_1 .img_box.showImg, #story_3 .img_box.showImg, #story_5 .img_box.showImg {
+  animation: slideInRight .5s ease-in-out forwards;
+}
+
+#story_2 .img_box.showImg, #story_4 .img_box.showImg {
+  animation: slideInLeft .5s ease-in-out forwards;
+}
+
+
+.story_box .text_box {
+  width: 65%;
   font-family: var(--sub-font);
   font-size: 1.3rem;
 }
 
-#story_box .text_box p {
+.story_box .text_box p {
   line-height: 2em;
   padding: 2.5rem 3.13rem;
 }
 
-#story_box .text_box strong {
+.story_box .text_box strong {
   font-weight: 400;
   background-position: top left;
   background-repeat: no-repeat;
   background-size: 0% auto;
   transition: background-size .5s;
-  background-image: linear-gradient(to top, var(--ligth-color) 20%, transparent 0);
+  background-image: linear-gradient(to top, #bcd539cf 80%, transparent 0);
 }
 
-#story_box .text_box strong.highlight {
+.story_box .text_box strong.highlight {
   background-size: 100% auto;
-  text-shadow: 0 0 8px var(--ligth-color);
 }
 
 
-#story_box .img_box {
-  width: 50%;
+.story_box .img_box {
+  visibility: hidden;
+  max-width: 600px;
 }
 
-#story_box .img_box img {
+.story_box .img_box img {
   width: 100%;
 }
 
@@ -85,26 +110,86 @@
 /* 일반 pc */
 @media screen and (max-width:1280px) {
 
-  #content {
-    width: 96%;
-    padding: 0 2%;
-  }
+#content {
+  width: auto;
+  padding: 0;
+}
   
 }
 
 /* 테블릿 */
 @media screen and (max-width:1024px) {
   
-  #content{ width:auto; margin:0; }
-  
-}  
+#content{ 
+  width:auto; 
+  margin:0; }
+
+
+#content h3 {
+  margin-top: 5.71rem;
+  font-size: 3rem;
+}
+
+/* #story_1, #story_2, #story_3, #story_4, #story_5 {
+  height: 200vw;
+}
+
+#story_5 {
+  height: 250vw;
+} */
+
+.story_box {
+  align-items: initial;
+  text-align: initial
+}
+
+.story_box .text_box {
+  width: 100%;
+  font-size: 2.5vh;
+}
+
+.story_box .text_box p {
+  padding: 1rem;
+}
+
+#story_2 .story_box, #story_4 .story_box {
+  flex-direction: row;
+}
+
+#story_1 .story_box, #story_3 .story_box, #story_5 .story_box {
+  flex-direction: row-reverse;
+}
+
+
+}
+
+
 
 /* 소형 테블릿 */
 @media screen and (max-width:768px) {
+
+.story_box .text_box {
+  font-size: 2vh;
+}
 }
 
 /* 모바일 */
 @media screen and (max-width:640px) {
+
+#content h3 {
+  font-size: 2.3rem;
+  margin-bottom: 0;
 }
 
+
+.story_box .text_box {
+  /* font-size: 1rem; */
+}
+
+#story_1 .story_box, #story_2 .story_box, #story_3 .story_box, #story_4 .story_box, #story_5 .story_box {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+}
 

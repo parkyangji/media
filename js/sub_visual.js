@@ -20,11 +20,3 @@ screen_size();  //최초 실행시 호출
 $(window).resize(function(){ 
     screen_size();
 }); 
-
-// 스크롤 다운
-  
-$('.scrollDown').click(function(){
-  screenHeight = $(window).height();
-  $('html,body').animate({'scrollTop':screenHeight}, 1000);
-});
-
