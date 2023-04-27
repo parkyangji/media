@@ -1,0 +1,28 @@
+/* 와이드 pc  */
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+  
+  #content {
+    width: auto;
+    padding: 0;
+  }
+}
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+  #content{ 
+    width:auto; 
+    margin:0; 
+  }
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+  
+}
