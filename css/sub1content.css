@@ -1,9 +1,21 @@
 /* 와이드 pc  */
+
 #imgBG {
   display: block;
   left: 50%;
   right: inherit;
   transform: translateX(-50%);
+}
+
+#content h2 {
+  position: absolute;
+  text-align: center;
+  top: -60vh;
+  left: 0;
+  width: 100%;
+  color: var(--point-color);
+  font-size: 10vh;
+  text-shadow: 6px 4px #000;
 }
 
 #content {
@@ -13,16 +25,6 @@
   color: var(--text-color);
 }
 
-#content h2 {
-  position: absolute;
-  text-align: center;
-  top: -600px;
-  left: 0;
-  width: 100%;
-  color: var(--point-color);
-  font-size: 8vw;
-  text-shadow: 6px 4px #000;
-}
 
 #content h3 {
   color: var(--point-color);
@@ -34,13 +36,17 @@
   text-align: center;
 }
 
-/*========== story ==========*/
+
+/*========================*/
+
+
 
 #story_1, #story_2, #story_3, #story_4, #story_5 {
   overflow: hidden;
   height: 100vh;
   background-color: var(--back-color);
-  /* padding-bottom: 50vw; */
+  display: flex;
+  flex-direction: column;
 }
 
 #story_1 {background-color: rgb(61, 35, 10);}
@@ -73,9 +79,9 @@
 
 
 .story_box .text_box {
-  width: 65%;
+  flex: 2 1 0;
   font-family: var(--sub-font);
-  font-size: 1.3rem;
+  font-size: 2.3vh;
 }
 
 .story_box .text_box p {
@@ -98,8 +104,9 @@
 
 
 .story_box .img_box {
-  visibility: hidden;
+  flex: 1 1 0;
   max-width: 600px;
+  visibility: hidden;
 }
 
 .story_box .img_box img {
@@ -109,11 +116,13 @@
 
 /* 일반 pc */
 @media screen and (max-width:1280px) {
-
+  
 #content {
   width: auto;
   padding: 0;
 }
+
+/*========================*/
   
 }
 
@@ -126,30 +135,20 @@
 
 
 #content h3 {
-  margin-top: 5.71rem;
+  margin-top: 0;
   font-size: 3rem;
 }
 
-/* #story_1, #story_2, #story_3, #story_4, #story_5 {
-  height: 200vw;
-}
+/*========================*/
 
-#story_5 {
-  height: 250vw;
-} */
+#story_1, #story_2, #story_3, #story_4, #story_5 {
+  justify-content: center;
+}
 
 .story_box {
+  height: 60vh;
   align-items: initial;
   text-align: initial
-}
-
-.story_box .text_box {
-  width: 100%;
-  font-size: 2.5vh;
-}
-
-.story_box .text_box p {
-  padding: 1rem;
 }
 
 #story_2 .story_box, #story_4 .story_box {
@@ -161,16 +160,25 @@
 }
 
 
+.story_box .text_box {
+  flex: 1.5 1 0;
+  font-size: 2vw;
+}
+
+.story_box .text_box p {
+  padding: 1rem;
+}
+
+
+
+
 }
 
 
 
 /* 소형 테블릿 */
 @media screen and (max-width:768px) {
-
-.story_box .text_box {
-  font-size: 2vh;
-}
+  
 }
 
 /* 모바일 */
@@ -178,18 +186,36 @@
 
 #content h3 {
   font-size: 2.3rem;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
+/*========================*/
 
-.story_box .text_box {
-  /* font-size: 1rem; */
+#story_1, #story_2, #story_3, #story_4, #story_5 {
+  justify-content: center;
+  height: auto;
+  padding: 3rem 1rem;
 }
 
 #story_1 .story_box, #story_2 .story_box, #story_3 .story_box, #story_4 .story_box, #story_5 .story_box {
   flex-direction: column;
-  justify-content: flex-start;
 }
 
+.story_box {
+  height: auto;
+  text-align: justify;
+}
+
+.story_box .text_box {
+  font-size: 1rem;
+}
+
+.story_box .img_box {
+  margin: 0 auto;
+  visibility: visible;
+  min-height: 200px;
+  overflow: hidden;
+}
 }
 

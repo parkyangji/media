@@ -17,10 +17,8 @@ $(window).on('scroll', function() {
 
     if (scroll >= screenHeight) {
       $('#headerArea').css('background-color', 'var(--back-color)');
-      $('#headerArea h1').show();
     } else if (scroll < screenHeight){
       $('#headerArea').css('background-color', 'transparent');
-      $('#headerArea h1').hide();
     }
 
   } else {

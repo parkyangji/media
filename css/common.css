@@ -236,7 +236,6 @@ dd {
 }
 
 #headerArea h1 {
-  display: none;
   float: left;
 }
 
@@ -244,8 +243,10 @@ dd {
   text-indent: -999px;
   width: 255px;
   height: 81px;
-  margin-top: 30px;
+  margin-top: 35px;
   background: url(../images/cindy_logo_header.png);
+  background-repeat: no-repeat;
+  background-size: 70%;
 }
 
 #headerArea #gnb {
@@ -461,8 +462,6 @@ body{font-size: 14px;}
 }
 
 #headerArea h1 a {
-  background-repeat: no-repeat;
-  background-size: 70%;
   margin-top: 15px;
 }
 

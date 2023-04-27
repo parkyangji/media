@@ -141,7 +141,6 @@
           </div>
         </div>
       </section>
-      <div class="footer_box"></div>
     </article>
     <footer id="footerArea">
       <a href="#" class="topMove">Top</a>
@@ -162,43 +161,84 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 <script>
-gsap.registerPlugin(ScrollTrigger);
 
-gsap.utils.toArray("section").forEach((section, i) => {
+function resizeWidth() {
+  
+  gsap.registerPlugin(ScrollTrigger);
 
-  const section_img = document.querySelectorAll('.img_box');
+  ScrollTrigger.matchMedia({
+    "(min-width: 640px)": function() {
 
-  ScrollTrigger.create({
-    trigger: section,
-    start: "top top", 
-    pin: true,
-    pinSpacing: false,
-    //markers: true, 표시
-    //scrub: true, 되감기
+      gsap.utils.toArray("section").forEach((section, i) => {
+        // 섹션 넘기기
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top top", 
+          pin: true,
+          pinSpacing: false,
+        });
+
+        // 이미지 스크롤
+        const section_img = document.querySelectorAll('.img_box');
+
+        gsap.utils.toArray("section").forEach((section, i) => {
+          ScrollTrigger.create({
+            trigger: section,
+            start: "top bottom",
+            onToggle: self => {
+              const isVisible = self.isActive;
+              if (isVisible) {
+                section_img[i].classList.add("showImg");
+              } else {
+                section_img[i].classList.remove("showImg");
+              }
+              }
+          });
+
+        });
+
+      });
+
+      // 텍스트 하이라이트
+      gsap.utils.toArray("strong").forEach((strong) => {
+        ScrollTrigger.create({
+          trigger: strong,
+          start: "top center",
+          onEnter: () => strong.classList.add("highlight"), //한번만 실행
+        });
+      });
+
+
+    },
+    "(max-width: 640px)": function() {
+
+      gsap.utils.toArray("section").forEach((section, i) => {
+        // 섹션 넘기기
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top top", 
+          pin: false,
+        });
+    
+      })
+
+      // 텍스트 하이라이트
+      gsap.utils.toArray("strong").forEach((strong) => {
+        ScrollTrigger.create({
+          trigger: strong,
+          start: "top center",
+          onEnter: () => strong.classList.add("highlight"), //한번만 실행
+        });
+      });
+
+    }
   });
-  ScrollTrigger.create({
-    trigger: section,
-    start: "top bottom",
-    onToggle: self => {
-      const isVisible = self.isActive;
-      if (isVisible) {
-        section_img[i].classList.add("showImg");
-      } else {
-        section_img[i].classList.remove("showImg");
-      }
-      }
-  });
-
-});
 
 
-gsap.utils.toArray("strong").forEach((strong) => {
-  ScrollTrigger.create({
-    trigger: strong,
-    start: "top center",
-    onEnter: () => strong.classList.add("highlight"), //한번만 실행
-  });
-});
+  window.addEventListener("resize", ScrollTrigger.update);
+}
+
+resizeWidth();
 
 </script>
 </body>

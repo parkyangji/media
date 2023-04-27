@@ -13,7 +13,6 @@
           $("#videoBG").attr('src','./images/back.mp4');
           $("#imgBG").hide();
           current=true;
-          $('#headerArea h1').hide();
           $('#headerArea').removeClass('active');
         }
       if(screenSize <= 1024){
@@ -21,7 +20,6 @@
           $("#videoBG").attr('src','');
           $("#imgBG").show();
           current=false;
-          $('#headerArea h1').show();
           
       }
   }
