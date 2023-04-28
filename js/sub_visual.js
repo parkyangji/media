@@ -11,7 +11,7 @@ function screen_size(){
         $("#imgBG").attr("src", "./images/sub1_main1.jpg");
       }
     if(screenSize <= 1024){
-      $("#imgBG").attr("src", "./images/sub1_main1_2.jpg");
+      $("#imgBG").attr("src", "./images/sub1_main2.JPG");
     }
 }
 

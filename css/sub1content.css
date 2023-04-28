@@ -1,3 +1,4 @@
+/* 화면전환에 따른 이슈로 일반pc(1280), 모바일(640)에서 css변환 => 태블릿(1024) js전환 */
 /* 와이드 pc  */
 
 #imgBG {
@@ -43,7 +44,7 @@
 
 #story_1, #story_2, #story_3, #story_4, #story_5 {
   overflow: hidden;
-  height: 100vh;
+  height: 100vmax; 
   background-color: var(--back-color);
   display: flex;
   flex-direction: column;
@@ -114,7 +115,7 @@
 }
 
 
-/* 일반 pc */
+/* 일반 pc */ 
 @media screen and (max-width:1280px) {
   
 #content {
@@ -123,30 +124,8 @@
 }
 
 /*========================*/
-  
-}
-
-/* 테블릿 */
-@media screen and (max-width:1024px) {
-  
-#content{ 
-  width:auto; 
-  margin:0; }
-
-
-#content h3 {
-  margin-top: 0;
-  font-size: 3rem;
-}
-
-/*========================*/
-
-#story_1, #story_2, #story_3, #story_4, #story_5 {
-  justify-content: center;
-}
 
 .story_box {
-  height: 60vh;
   align-items: initial;
   text-align: initial
 }
@@ -169,7 +148,28 @@
   padding: 1rem;
 }
 
+.story_box .img_box {
+  visibility: visible;
+}
 
+  
+}
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+  
+#content{ 
+  width:auto; 
+  margin:0; }
+
+
+#content h3 {
+  margin-top: 5.71rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+/*========================*/
 
 
 }
@@ -213,7 +213,6 @@
 
 .story_box .img_box {
   margin: 0 auto;
-  visibility: visible;
   min-height: 200px;
   overflow: hidden;
 }
