@@ -1,4 +1,3 @@
-/* 화면전환에 따른 이슈로 일반pc(1280), 모바일(640)에서 css변환 => 태블릿(1024) js전환 */
 /* 와이드 pc  */
 
 #imgBG {
@@ -38,18 +37,6 @@
 }
 
 
-/*========================*/
-
-
-
-#story_1, #story_2, #story_3, #story_4, #story_5 {
-  overflow: hidden;
-  height: 100vmax; 
-  background-color: var(--back-color);
-  display: flex;
-  flex-direction: column;
-}
-
 #story_1 {background-color: rgb(61, 35, 10);}
 #story_2 {background-color: rgb(74, 88, 34)}
 #story_3 {background-color: rgb(97, 60, 9)}
@@ -57,11 +44,23 @@
 #story_5 {background-color: rgb(36, 44, 30)}
 
 
+/*========================*/
+
+
+
+#story_1, #story_2, #story_3, #story_4, #story_5 {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+
 .story_box {
   display: flex;
   align-items: center;
   text-align: justify;
-  justify-content: flex-end
+  justify-content: flex-end;
+  margin-bottom: 9.38rem;
 }
 
 
@@ -125,9 +124,35 @@
 
 /*========================*/
 
+
+  
+}
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+  
+#content{ 
+  width:auto; 
+  margin:0; }
+
+
+#content h3 {
+  margin-top: 5.71rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+/*========================*/
+
 .story_box {
   align-items: initial;
-  text-align: initial
+  text-align: initial;
+  margin-bottom: 5.71rem;
+}
+
+#story_1, #story_2, #story_3, #story_4, #story_5 {
+  height: auto;
+  padding: 3rem 1rem;
 }
 
 #story_2 .story_box, #story_4 .story_box {
@@ -152,26 +177,6 @@
   visibility: visible;
 }
 
-  
-}
-
-/* 테블릿 */
-@media screen and (max-width:1024px) {
-  
-#content{ 
-  width:auto; 
-  margin:0; }
-
-
-#content h3 {
-  margin-top: 5.71rem;
-  margin-bottom: 1rem;
-  font-size: 3rem;
-}
-
-/*========================*/
-
-
 }
 
 
@@ -191,12 +196,6 @@
 }
 
 /*========================*/
-
-#story_1, #story_2, #story_3, #story_4, #story_5 {
-  justify-content: center;
-  height: auto;
-  padding: 3rem 1rem;
-}
 
 #story_1 .story_box, #story_2 .story_box, #story_3 .story_box, #story_4 .story_box, #story_5 .story_box {
   flex-direction: column;

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+
+
+
+      font-size: 10vh;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- HTML -->
+<!-- HTML -->
+<div class="ella-text">
+  E l l a
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+<script>
+// JavaScript using ScrollTrigger library
+gsap.registerPlugin(ScrollTrigger);
+
+const ellaLetters = gsap.utils.toArray('.ella-text');
+ellaLetters.forEach((text) => {
+  const letters = text.textContent.split(''); // split the text content into an array of letters
+  text.textContent = ''; // remove the original text content from the element
+
+  letters.forEach((letter, index) => {
+    const letterWrapper = document.createElement('div'); // create a new element to wrap each letter
+    letterWrapper.textContent = letter; // set the text content of the wrapper element to the current letter
+    letterWrapper.classList.add('ella-letter'); // add a class to the wrapper element for styling
+    text.appendChild(letterWrapper); // append the wrapper element to the original element
+  });
+
+  gsap.set(text.querySelectorAll('.ella-letter'), { autoAlpha: 0 }); // hide all letters initially
+
+  ScrollTrigger.create({
+    trigger: text,
+    start: 'top 80%',
+    onEnter: () => {
+      gsap.to(text.querySelectorAll('.ella-letter'), { autoAlpha: 1, duration: 0.5, stagger: 0.1 }); // reveal each letter with a slight delay using stagger
+    },
+    onLeaveBack: () => {
+      gsap.to(text.querySelectorAll('.ella-letter'), { autoAlpha: 0, duration: 0.5 }); // hide the letters when the user scrolls back up
+    },
+    once: true
+  });
+});
+
+
+</script>
+</body>
+</html>
