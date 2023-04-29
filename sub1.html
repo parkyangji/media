@@ -205,7 +205,7 @@ function resizeWidth() {
       gsap.utils.toArray("strong").forEach((strong) => {
         ScrollTrigger.create({
           trigger: strong,
-          start: "top center",
+          start: "top 70%",
           onEnter: () => strong.classList.add("highlight"), //한번만 실행
         });
       });
@@ -228,7 +228,7 @@ function resizeWidth() {
       gsap.utils.toArray("strong").forEach((strong) => {
         ScrollTrigger.create({
           trigger: strong,
-          start: "top center",
+          start: "top 70%",
           onEnter: () => strong.classList.add("highlight"), //한번만 실행
         });
       });

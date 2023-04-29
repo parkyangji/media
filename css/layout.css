@@ -21,7 +21,7 @@
 #content h3 {
   color: var(--point-color);
   margin-top: 9.38rem;
-  font-size: 3.75rem;
+  font-size: var(--title-text-size);
   font-weight: 400;
   font-style: italic;
 }
@@ -65,7 +65,7 @@
 #story p {
   padding: 2.5rem 3.13rem;
   font-family: var(--sub-font);
-  font-size: 1.5rem;
+  font-size: var(--text-size);
   line-height: 2em;
   text-align: justify;
 }
@@ -147,7 +147,7 @@
 #character .character_img dl dd {
   color: var(--text-color-light);
   font-family: var(--sub-font);
-  font-size: 1.5rem;
+  font-size: var(--text-color);
   text-align: center;
   position: absolute;
   left: 0;
@@ -193,14 +193,14 @@
 
 #trailer dt {
   color: var(--text-color-light);
-  font-size: 2.5rem;
+  font-size: var(--sub-title-text-size);
   margin-bottom: 70px;
 }
 
 #trailer dd,
 #trailer p {
   font-family: var(--sub-font);
-  font-size: 1.5rem;
+  font-size: var(--text-size);
 }
 
 #trailer p {
@@ -315,7 +315,7 @@
 
 #content h3 {
   margin-top: 6rem;
-  font-size: 3rem;
+  font-size: var(--title-text-size);
 }
 
 #content .btn_box {
@@ -334,10 +334,10 @@
 #story .story_img li:nth-of-type(2) {display: none;}
   
 #story h3 {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 #story p {
-  font-size: 1.1rem;
+  font-size: var(--text-size);
   float: right;
   width: 50%;
   padding: 1.5rem;
@@ -385,7 +385,7 @@
 }
 
 #character .character_img dl dt {
-  font-size: 1.8rem;
+  font-size: var(--sub-title-text-size);
   text-align: initial;
   line-height: 1.5em;
   margin-bottom: 1rem;
@@ -394,7 +394,7 @@
 #character .character_img dl dd {
   color: var(--text-color);
   opacity: 1;
-  font-size: 1.1rem;
+  font-size: var(--text-size);
   text-align: initial;
   position: static;
 }
@@ -418,12 +418,12 @@
 }
 
 #trailer dt {
-  font-size: 1.8rem;
+  font-size: var(--sub-title-text-size);
   margin-bottom: 1rem;
 }
 
 #trailer dd {
-  font-size: 1.1rem;
+  font-size: var(--text-size);
 }
 
 #trailer img {
@@ -435,7 +435,7 @@
   width: 40%;
   padding: 1rem;
   text-align: initial;
-  font-size: 1.1rem;
+  font-size: var(--text-color);
   box-sizing: border-box;
   display: -webkit-box;
   word-wrap: break-word;
@@ -529,7 +529,7 @@
 @media screen and (max-width:640px) {
 
 #content h3 {
-  font-size: 2.3rem;
+  font-size: var(--title-text-size);
   margin-top: 3rem;
 }
 
@@ -545,11 +545,11 @@
 }
 
 #story p {
-  font-size: 1rem;
+  font-size: var(--text-size);
   width: auto;
   text-align: justify;
   float: none;
-  max-height: 220px
+  max-height: 220px;
 }
 
 #story .story_img li {
@@ -565,12 +565,12 @@
 /*========== character ==========*/
 
 #character .character_img dl dt {
-  font-size: 1.5rem;
+  font-size: var(--sub-title-text-size);
   text-align: center;
 }
 
 #character .character_img dl dd {
-  font-size: 1rem;
+  font-size: var(--text-size);
   text-align: center;
 }
 
@@ -599,7 +599,7 @@
 
 #trailer .main_trailer {
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 #trailer .main_trailer a {
@@ -611,11 +611,11 @@
 }
 
 #trailer dt {
-  font-size: 1.5rem;
+  font-size: var(--sub-title-text-size);
 }
 
 #trailer dd {
-  font-size: 1rem;
+  font-size: var(--text-size);
 }
 
 #trailer p {

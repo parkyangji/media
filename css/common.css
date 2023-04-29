@@ -5,7 +5,7 @@
   /*========== Colors ==========*/
   --back-color: #0a1238;
   --text-color: #858ba6;
-  --text-color-light: #fff;
+  --text-color-light: #f9f9f9; 
   --point-color: #c9a55c;
   --ligth-color: #4cc4e9;
 
@@ -13,6 +13,28 @@
   --main-font: 'Playfair Display', serif;
   --sub-font: 'Lato', sans-serif;
 
+  /*========== Font size ==========*/
+  --title-text-size: 3.75rem;
+  --sub-title-text-size: 2.5rem;
+  --text-size: 1.5rem;
+}
+
+@media screen and (max-width:1024px) {
+  :root {
+      /*========== Font size ==========*/
+        --title-text-size: 3rem;
+        --sub-title-text-size: 1.8rem;
+        --text-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width:640px) {
+  :root {
+      /*========== Font size ==========*/
+        --title-text-size: 2.3rem;
+        --sub-title-text-size: 1.5rem;
+        --text-size: 1rem;
+  }
 }
 
 /* Reset CSS  */
@@ -215,7 +237,7 @@ dd {
 
 #headerArea #gnb ul a {
   color: var(--point-color);
-  font-size: 1.88em;
+  font-size: 2.19rem;
   line-height: 130px;
 }
 
@@ -285,7 +307,7 @@ dd {
   border-radius: 5000px;
   box-sizing: border-box;
   position: absolute;
-  font-size: 1.125em;
+  font-size: 1rem;
   left: 50%;
   transform: translateX(-50%);
   bottom: 10%;
@@ -395,7 +417,7 @@ dd {
 /* 일반 pc */
 @media screen and (max-width:1280px) {
   #headerArea #gnb ul a {
-    font-size: 1.6em;
+    font-size: 1.88rem;
   }
 
 }

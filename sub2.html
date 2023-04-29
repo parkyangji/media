@@ -64,7 +64,7 @@
         —ELLA’S MOTHER
       </div> -->
       <section id="Ella">
-        <div class="Main">
+        <div class="Main" data-bgcolor="#fff">
           <h3 class="h3">Ella</h3>
           <div class="Main_img">
             <img src="./images/sub2_1.jpg" alt="">
@@ -84,7 +84,7 @@
       </section>
 
       <section id="Kit">
-        <div class="Main">
+        <div class="Main" data-bgcolor="#fff">
           <h3>Kit</h3>
           <div class="Main_img">
             <img src="./images/sub2_1.jpg" alt="">
@@ -104,7 +104,7 @@
       </section>
 
       <section id="Lady Tremaine">
-        <div class="Main">
+        <div class="Main" data-bgcolor="#fff">
           <h3>Lady Tremaine</h3>
           <div class="Main_img">
             <img src="./images/sub2_1.jpg" alt="">
@@ -124,7 +124,7 @@
       </section>
 
       <section id="Fairy Godmother">
-        <div class="Main">
+        <div class="Main" data-bgcolor="#fff">
           <h3>Fairy Godmother</h3>
           <div class="Main_img">
             <img src="./images/sub2_1.jpg" alt="">
@@ -165,35 +165,64 @@
 <script>
 
 gsap.registerPlugin(ScrollTrigger);
+const sectionHeight = document.querySelector('.Main').offsetHeight;
 
-const letter = document.querySelector('.h3');
+console.log(sectionHeight)
 
-gsap.set(letter, { autoAlpha: 0 }); // hide all letters initially
+gsap.utils.toArray(".Main").forEach((Main, i) => {
 
-ScrollTrigger.create({
-  trigger: '#Ella',
-  markers: true,
-  start: 'top top', // adjust this value based on when you want the letters to start appearing
-  onToggle: self => {
-      const isVisible = self.isActive;
-      if (isVisible) {
-        gsap.to(letter, { autoAlpha: 1, duration: 0.5, }); 
-      } else {
-        gsap.to(letter, { autoAlpha: 0, duration: 0.5, }); 
-      }
-    },
-});
 
-gsap.utils.toArray(".Main").forEach((section, i) => {
+
+  // 스크롤 고정
   ScrollTrigger.create({
-    trigger: section,
-    start: "top top", 
+    trigger: Main,
+    start: "top", 
+   // end: `+=${sectionHeight*2}`,
+    markers: true,
     pin: true,
     pinSpacing: true,
-
+    once: true, // 한번만
   });
+  //문구
+
+  const letter = document.querySelectorAll('.Main')[i].children[0];
+
+  gsap.set(letter, { autoAlpha: 0 });
+
+  ScrollTrigger.create({
+  trigger: Main,
+  start: 'top',
+  onEnter: () => {
+    gsap.to(letter, { autoAlpha: 1, duration: 1, });
+  },
+});
 
 })
+
+/* 배경색 바꾸기
+
+  const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
+
+  scrollColorElems.forEach((colorSection, i) => {
+    const prevBg = '#0a1239';
+    //const prevText = i === 0 ? "" : scrollColorElems[i - 1].dataset.textcolor;
+
+    ScrollTrigger.create({
+      trigger: colorSection,
+     // scroller: colorSection,
+      start: "top 50%",
+      onEnter: () =>
+        gsap.to(colorSection, {
+          backgroundColor: colorSection.dataset.bgcolor,
+         // color: colorSection.dataset.textcolor,
+          overwrite: "auto"
+        })
+    });
+  });
+
+
+*/
+
 
 
 
