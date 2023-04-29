@@ -3,8 +3,9 @@
 /* root  */
 :root {
   /*========== Colors ==========*/
-  --back-color: #0a1239;
-  --text-color: #fff;
+  --back-color: #0a1238;
+  --text-color: #858ba6;
+  --text-color-light: #fff;
   --point-color: #c9a55c;
   --ligth-color: #4cc4e9;
 
@@ -135,53 +136,6 @@ dd {
   100% {
     opacity: 0;
     transform: translateY(20px);
-  }
-}
-
-@keyframes clockwise {
-  0% {
-    top: -5px;
-    left: 0;
-  }
-
-  12% {
-    top: -2px;
-    left: 2px;
-  }
-
-  25% {
-    top: 0;
-    left: 5px;
-  }
-
-  37% {
-    top: 2px;
-    left: 2px;
-  }
-
-  50% {
-    top: 5px;
-    left: 0;
-  }
-
-  62% {
-    top: 2px;
-    left: -2px;
-  }
-
-  75% {
-    top: 0;
-    left: -5px;
-  }
-
-  87% {
-    top: -2px;
-    left: -2px;
-  }
-
-  100% {
-    top: -5px;
-    left: 0;
   }
 }
 
