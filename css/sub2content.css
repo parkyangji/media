@@ -20,14 +20,12 @@
 
 #content {
   position: relative;
-  padding: 0;
+  padding: 0 3.13rem;
   background: var(--back-color);
   color: var(--text-color);
 }
 
 /*========================*/
-
-/*==========Ella==========*/
 
 
 .Main {
@@ -60,29 +58,59 @@
 }
 
 .Sub {
-  height: 1000px;
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
+  min-height: 1000px;
+  display: grid;
+  grid-template-rows: minmax(auto, 12vw) auto auto;
+  grid-template-columns: minmax(auto, 15vw) minmax(auto, 12vw) auto;
+  padding: 6.25rem;
 }
 
-.Sub p {
-  flex: 1 1 0;
-  text-align: center;
-  font-family: var(--sub-font);
-  font-size: 1.5vw;
+.Sub .Sub_img:nth-of-type(1) {
+  max-width: 200px;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  overflow: hidden;
+  justify-self: right;
 }
 
-.Sub_imgs {
-  flex: 1 1 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.Sub .Sub_img:nth-of-type(1) img {
+  height: 100%;
 }
 
-.Sub_imgs img {
+.Sub .Sub_img:nth-of-type(2) {
+  max-width: 250px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  overflow: hidden;
+}
+
+.Sub .Sub_img:nth-of-type(2) img {
   width: 100%;
 }
+
+.Sub .Sub_text {
+  grid-column: 3/4;
+  grid-row: 2/4;
+}
+
+.Sub .Sub_text>span {
+  display: block;
+  color: var(--text-color-light);
+  font-size: var(--sub-title-text-size);
+  margin-bottom: 5rem;
+}
+
+.Sub .Sub_text p {
+  font-family: var(--sub-font );
+  font-size: var(--text-size);
+  line-height: 1.8em;
+}
+
+.Sub .Sub_text p span {
+  color: var(--text-color-light);
+}
+
+
 
 /* 일반 pc */
 @media screen and (max-width:1280px) {
@@ -99,6 +127,39 @@
   width:auto; 
   margin:0; 
 }
+
+.Sub {
+  min-height: 800px;
+  padding: calc(6.25rem / 2);
+  grid-template-columns: 1.5fr .3fr .5fr .5fr;
+  grid-template-rows: 2fr;
+}
+
+.Sub .Sub_img:nth-of-type(1) {
+  grid-column: 4/5;
+  grid-row: 3/4;
+  justify-self: unset;
+}
+
+.Sub .Sub_img:nth-of-type(1) img {
+  height: auto;
+  width: 100%;
+}
+
+.Sub .Sub_img:nth-of-type(2) {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+
+.Sub .Sub_text {
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+
+.Sub .Sub_text>span {
+  margin-bottom: calc(5rem/2);
+}
 }
 
 /* 소형 테블릿 */
@@ -108,5 +169,25 @@
 
 /* 모바일 */
 @media screen and (max-width:640px) {
+
+.Sub {
+  padding: 1rem;
+  grid-template-rows: max-content;
+  grid-template-columns: none;
+}
+
+.Sub .Sub_img:nth-of-type(1) {
+  display: none;
+}
+
+.Sub .Sub_img:nth-of-type(2) {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+
+.Sub .Sub_text {
+  grid-column: 1/5;
+  grid-row: 2/3;
+}
   
 }

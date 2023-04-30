@@ -58,11 +58,6 @@
     </header>
     <article id="content">
       <h2>character</h2>
-      <!-- <div class="intro">
-        I WANT TO TELL YOU A SECRET THAT WILL SEE YOU THROUGH
-        ALL THE TRIALS THAT LIFE CAN OFFER: HAVE COURAGE AND BE KIND.
-        —ELLA’S MOTHER
-      </div> -->
       <section id="Ella">
         <div class="Main" data-bgcolor="#fff">
           <h3 class="h3">Ella</h3>
@@ -71,14 +66,24 @@
           </div>
         </div>
         <div class="Sub">
-          <p>a strong-willed and kind-hearted young woman</p>
-          <div class="Sub_imgs">
-            <div class="Sub_img">
-              <img src="./images/sub2_2.jpg" alt="">
-            </div>
-            <div class="Sub_img">
-              <img src="./images/sub2_3.jpg" alt="">
-            </div>
+          <div class="Sub_img">
+            <img src="./images/sub2_3.jpg" alt="">
+          </div>
+          <div class="Sub_img">
+            <img src="./images/sub2_2.jpg" alt="">
+          </div>
+          <div class="Sub_text">
+            <span>CAST</span>
+            <p><span>Lily James as Ella, also known as Cinderella,</span> a strong-willed and kind-hearted young woman who is
+              forced to become a maidservant in her own house by her stepfamily.
+              James was announced to have been cast on April 30, 2013. According to Kenneth Branagh, "hundreds and
+              hundreds of girls" auditioned for the part, with actresses such as Saoirse Ronan, Alicia Vikander,
+              Gabriella Wilde, Bella Heathcote, and Margot Robbie also being considered. James originally auditioned for
+              the role of Anastasia, but the casting director suggested that she try out for Cinderella. James described
+              her character as a "kind, good person that is able to be happy in a cruel environment, and that is her
+              superpower… I think we have to, to get through life, which can throw us off. I think what’s amazing about
+              Ella is that she’s the best version of herself, at all times. That’s what remarkable about her." 
+            </p>
           </div>
         </div>
       </section>
@@ -91,14 +96,21 @@
           </div>
         </div>
         <div class="Sub">
-          <p>a humble and noble soon-to-be king</p>
-          <div class="Sub_imgs">
-            <div class="Sub_img">
-              <img src="./images/sub2_2.jpg" alt="">
-            </div>
-            <div class="Sub_img">
-              <img src="./images/sub2_3.jpg" alt="">
-            </div>
+          <div class="Sub_img">
+            <img src="./images/sub2_3.jpg" alt="">
+          </div>
+          <div class="Sub_img">
+            <img src="./images/sub2_2.jpg" alt="">
+          </div>
+          <div class="Sub_text">
+            <span>CAST</span>
+            <p><span>Richard Madden as Prince Kit,</span> a humble and noble soon-to-be king who falls in love with Ella, despite his
+              duty to marry the princess for the good of his kingdom. Madden was announced to have been cast on May 8,
+              2013. Richard Madden is a Scottish stage, film, and television actor known for
+              portraying Robb Stark in the HBO series "Game of Thrones" and Prince Kit in Disney's "Cinderella."
+              Starring as David Budd in the BBC miniseries "Bodyguard" has also brought him more international acclaim 
+              and attention including a Golden Globe and other nominations.
+            </p>
           </div>
         </div>
       </section>
@@ -111,14 +123,21 @@
           </div>
         </div>
         <div class="Sub">
-          <p>Ella's bitter and broken stepmother</p>
-          <div class="Sub_imgs">
-            <div class="Sub_img">
-              <img src="./images/sub2_2.jpg" alt="">
-            </div>
-            <div class="Sub_img">
-              <img src="./images/sub2_3.jpg" alt="">
-            </div>
+          <div class="Sub_img">
+            <img src="./images/sub2_3.jpg" alt="">
+          </div>
+          <div class="Sub_img">
+            <img src="./images/sub2_2.jpg" alt="">
+          </div>
+          <div class="Sub_text">
+            <span>CAST</span>
+            <p><span>Cate Blanchett as Lady Tremaine,</span> Ella's bitter and broken stepmother, who despises her stepdaughter for
+              her unbreakable spirit and kindness. Blanchett was announced to have been cast on November 27, 2012.
+              Blanchett described her character as a "woman who has tried to start her life again, and becomes intensely
+              jealous of the deep affection that her new husband has for his daughter, Cinderella. She's not as
+              beautiful and not as kind and as good as Cinderella. When Cinderella's father dies, the financial
+              pressures, the panic and the jealousy grow… that is what makes her wicked."
+            </p>
           </div>
         </div>
       </section>
@@ -131,14 +150,19 @@
           </div>
         </div>
         <div class="Sub">
-          <p>a ditzy yet caring sorceress who helps Ella get to the ball</p>
-          <div class="Sub_imgs">
-            <div class="Sub_img">
-              <img src="./images/sub2_2.jpg" alt="">
-            </div>
-            <div class="Sub_img">
-              <img src="./images/sub2_3.jpg" alt="">
-            </div>
+          <div class="Sub_img">
+            <img src="./images/sub2_3.jpg" alt="">
+          </div>
+          <div class="Sub_img">
+            <img src="./images/sub2_2.jpg" alt="">
+          </div>
+          <div class="Sub_text">
+            <span>CAST</span>
+            <p><span>Helena Bonham Carter as the Fairy Godmother,</span> a ditzy yet caring sorceress who helps Ella get to the ball.
+              She also serves as the film's narrator. Bonham Carter was announced to have been cast on June 20,
+              2013. According to Simon Kinberg, she was the first choice for the role.
+              Helena Bonham Carter is an actress of great versatility, one of the UK's finest and most successful.
+            </p>
           </div>
         </div>
       </section>
@@ -164,10 +188,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 <script>
 
+
 gsap.registerPlugin(ScrollTrigger);
 const sectionHeight = document.querySelector('.Main').offsetHeight;
 
-console.log(sectionHeight)
 
 gsap.utils.toArray(".Main").forEach((Main, i) => {
 
@@ -178,10 +202,7 @@ gsap.utils.toArray(".Main").forEach((Main, i) => {
     trigger: Main,
     start: "top", 
    // end: `+=${sectionHeight*2}`,
-    markers: true,
     pin: true,
-    pinSpacing: true,
-    once: true, // 한번만
   });
   //문구
 

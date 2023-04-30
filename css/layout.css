@@ -147,7 +147,7 @@
 #character .character_img dl dd {
   color: var(--text-color-light);
   font-family: var(--sub-font);
-  font-size: var(--text-color);
+  font-size: var(--text-size);
   text-align: center;
   position: absolute;
   left: 0;
