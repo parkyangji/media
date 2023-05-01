@@ -425,7 +425,6 @@ dd {
 /* 테블릿 */
 @media screen and (max-width:1024px) {
 
-body{font-size: 14px;}
 
 #headerArea .menuOn{display: block;}
 

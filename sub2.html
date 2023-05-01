@@ -59,7 +59,7 @@
     <article id="content">
       <h2>character</h2>
       <section id="Ella">
-        <div class="Main" data-bgcolor="#fff">
+        <div class="Main" data-bgcolor="#e6d3ac">
           <h3 class="h3">Ella</h3>
           <div class="Main_img">
             <img src="./images/sub2_1.jpg" alt="">
@@ -78,29 +78,29 @@
               forced to become a maidservant in her own house by her stepfamily.
               James was announced to have been cast on April 30, 2013. According to Kenneth Branagh, "hundreds and
               hundreds of girls" auditioned for the part, with actresses such as Saoirse Ronan, Alicia Vikander,
-              Gabriella Wilde, Bella Heathcote, and Margot Robbie also being considered. James originally auditioned for
+              Gabriella Wilde, and Margot Robbie also being considered. James originally auditioned for
               the role of Anastasia, but the casting director suggested that she try out for Cinderella. James described
               her character as a "kind, good person that is able to be happy in a cruel environment, and that is her
               superpower… I think we have to, to get through life, which can throw us off. I think what’s amazing about
-              Ella is that she’s the best version of herself, at all times. That’s what remarkable about her." 
+              Ella is that she’s the best version of herself, at all times." 
             </p>
           </div>
         </div>
       </section>
 
       <section id="Kit">
-        <div class="Main" data-bgcolor="#fff">
+        <div class="Main" data-bgcolor="#e6d3ac">
           <h3>Kit</h3>
           <div class="Main_img">
-            <img src="./images/sub2_1.jpg" alt="">
+            <img src="./images/sub2_4.jpg" alt="">
           </div>
         </div>
         <div class="Sub">
           <div class="Sub_img">
-            <img src="./images/sub2_3.jpg" alt="">
+            <img src="./images/sub2_6.jpg" alt="">
           </div>
           <div class="Sub_img">
-            <img src="./images/sub2_2.jpg" alt="">
+            <img src="./images/sub2_5.jpg" alt="">
           </div>
           <div class="Sub_text">
             <span>CAST</span>
@@ -116,18 +116,18 @@
       </section>
 
       <section id="Lady Tremaine">
-        <div class="Main" data-bgcolor="#fff">
+        <div class="Main" data-bgcolor="#e6d3ac">
           <h3>Lady Tremaine</h3>
           <div class="Main_img">
-            <img src="./images/sub2_1.jpg" alt="">
+            <img src="./images/sub2_7.jpg" alt="">
           </div>
         </div>
         <div class="Sub">
           <div class="Sub_img">
-            <img src="./images/sub2_3.jpg" alt="">
+            <img src="./images/sub2_9.jpg" alt="">
           </div>
           <div class="Sub_img">
-            <img src="./images/sub2_2.jpg" alt="">
+            <img src="./images/sub2_8.jpg" alt="">
           </div>
           <div class="Sub_text">
             <span>CAST</span>
@@ -143,18 +143,18 @@
       </section>
 
       <section id="Fairy Godmother">
-        <div class="Main" data-bgcolor="#fff">
+        <div class="Main" data-bgcolor="#e6d3ac">
           <h3>Fairy Godmother</h3>
           <div class="Main_img">
-            <img src="./images/sub2_1.jpg" alt="">
+            <img src="./images/sub2_10.jpg" alt="">
           </div>
         </div>
         <div class="Sub">
           <div class="Sub_img">
-            <img src="./images/sub2_3.jpg" alt="">
+            <img src="./images/sub2_12.jpg" alt="">
           </div>
           <div class="Sub_img">
-            <img src="./images/sub2_2.jpg" alt="">
+            <img src="./images/sub2_11.jpg" alt="">
           </div>
           <div class="Sub_text">
             <span>CAST</span>
@@ -190,37 +190,37 @@
 
 
 gsap.registerPlugin(ScrollTrigger);
-const sectionHeight = document.querySelector('.Main').offsetHeight;
 
+function resizeWidth() {
 
-gsap.utils.toArray(".Main").forEach((Main, i) => {
+  const sectionHeight = document.querySelector('.Main').offsetHeight;
 
+  gsap.utils.toArray(".Main").forEach((Main, i) => {
 
+    // //스크롤 고정
+    // ScrollTrigger.create({
+    //   trigger: Main,
+    //   start: "top", 
+    //  // end: `+=${sectionHeight*2}`,
+    //   pin: true,
+    // });
 
-  // 스크롤 고정
-  ScrollTrigger.create({
+    //문구
+    const letter = document.querySelectorAll('.Main')[i].children[0];
+
+    gsap.set(letter, { autoAlpha: 0 });
+
+    ScrollTrigger.create({
     trigger: Main,
-    start: "top", 
-   // end: `+=${sectionHeight*2}`,
-    pin: true,
+    start: "-200",
+    onEnter: () => {
+      gsap.to(letter, { autoAlpha: 1, duration: 1, });
+    },
   });
-  //문구
 
-  const letter = document.querySelectorAll('.Main')[i].children[0];
+  });
 
-  gsap.set(letter, { autoAlpha: 0 });
-
-  ScrollTrigger.create({
-  trigger: Main,
-  start: 'top',
-  onEnter: () => {
-    gsap.to(letter, { autoAlpha: 1, duration: 1, });
-  },
-});
-
-})
-
-/* 배경색 바꾸기
+  //배경색 바꾸기
 
   const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
 
@@ -230,22 +230,22 @@ gsap.utils.toArray(".Main").forEach((Main, i) => {
 
     ScrollTrigger.create({
       trigger: colorSection,
-     // scroller: colorSection,
-      start: "top 50%",
+    // scroller: colorSection,
+      start: "-500",
       onEnter: () =>
         gsap.to(colorSection, {
           backgroundColor: colorSection.dataset.bgcolor,
-         // color: colorSection.dataset.textcolor,
+        // color: colorSection.dataset.textcolor,
           overwrite: "auto"
         })
     });
   });
 
 
-*/
+window.addEventListener("resize", ScrollTrigger.update);
+}
 
-
-
+resizeWidth();
 
 </script>
 </body>
