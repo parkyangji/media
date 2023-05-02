@@ -19,7 +19,6 @@
 }
 
 #content {
-  /* padding-top: 9.38rem; */
   position: relative;
   background: var(--back-color);
   color: var(--text-color);
@@ -36,7 +35,7 @@
 
 .intro p span {
   display: block;
-  margin-top: 2vw;
+  margin-top: 3vw;
 }
 
 /*========================*/
@@ -45,7 +44,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5vw;
-  padding: 5vw;
+  padding: 10vw;
 }
 
 .Main h3 {
@@ -63,7 +62,6 @@
   justify-self: flex-end;
   align-self: flex-end;
   width: 70%;
-  /* height: 80%; */
   overflow: hidden;
 }
 
@@ -73,11 +71,13 @@
   grid-row: 2/3;
   justify-self: flex-end;
   width: 70%;
+  overflow: hidden;
 }
 
 .Main_img:nth-of-type(3) {
   grid-column: 3/4;
   grid-row: 1/4;
+  overflow: hidden;
 }
 
 .Main_img img {
@@ -196,7 +196,7 @@
   /* min-height: 800px; */
   padding: calc(6.25rem / 2);
   grid-template-columns: 1.5fr .4fr .4fr;
-  grid-template-rows: .1fr 1fr 1fr;
+  grid-template-rows: .1fr 1fr .5fr;
   
 }
 
@@ -239,8 +239,10 @@
 @media screen and (max-width:640px) {
 
 .intro {
-  display: none;
+  padding: 2rem;
+  font-size: calc(var(--text-size)/1.2);
 }
+
 
 .Main {
   grid-template-columns: none;
