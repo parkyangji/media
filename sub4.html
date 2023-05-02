@@ -31,7 +31,7 @@
   </div>
   <div id="wrap">
     <div class="videoBox">
-      <img src="./images/index_main.jpg" id="imgBG">
+      <img src="" id="imgBG">
       <a class="scrollDown" href="#">
         <span>SCROLL DOWN</span>
       </a>
@@ -61,7 +61,12 @@
     </header>
     <article id="content">
       <h2>gallery</h2>
-
+      <div class="intro">
+        <p>I WANT TO TELL YOU A SECRET THAT WILL SEE YOU THROUGH
+          ALL THE TRIALS THAT LIFE CAN OFFER: HAVE COURAGE AND BE KIND.
+          <span>—ELLA’S MOTHER</span>
+        </p>
+      </div>
       <div class="duo__cell example__demo">
         <div class="grid grid--images" data-js="imagesloaded-progress">
             <div class="grid-sizer"></div>
@@ -118,76 +123,75 @@
               <div class="grid-image-item">
               <img src="images/celeb_08.jpg">
               <dl>
-                <dt>RED CARPET</dt>
-                <dd>Scarlett Johansson Glittered at the Rough Night Premiere in a Disco </dd>
+                <dt>After the ball</dt>
+                <dd>Cinderella and the Prince after getting out of the ballroom</dd>
               </dl>
           </div>
               <div class="grid-image-item">
               <img src="images/celeb_09.jpg">
               <dl>
-                <dt>ACCESSORIES</dt>
-                <dd>Behold: The Best Tiara Moments in Film</dd>
+                <dt>Cinderella's stepsisters</dt>
+                <dd>Cinderella's new sisters brought by her stepmother</dd>
               </dl>
           </div>
               <div class="grid-image-item">
               <img src="images/celeb_10.jpg">
               <dl>
-                <dt>CLOTHING</dt>
-                <dd>Here’s the Only Place Serena Williams Could Find a Swimsuit ‘That Would Fit’</dd>
+                <dt>A portrait</dt>
+                <dd>Portraits of Cinderella and the Prince</dd>
               </dl>
           </div>
           <div class="grid-image-item">
               <img src="images/celeb_11.jpg">
               <dl>
-                <dt>CELEBRITY</dt>
-                <dd>See Every Swimsuit the Kardashian-Jenner Squad Has Made Waves in</dd>
+                <dt>Cinderella's stepmother</dt>
+                <dd>the first encounter with Cinderella</dd>
               </dl>
           </div>
            <div class="grid-image-item">
               <img src="images/celeb_12.jpg">
               <dl>
-                <dt>JEWELRY</dt>
-                <dd>See Every Swimsuit the Kardashian-Jenner Squad Has Made Waves in</dd>
+                <dt>Stepmother and Stepsisters</dt>
+                <dd>Stepmother and stepsisters who went to the ballroom except Cinderella</dd>
               </dl>
           </div>
               <div class="grid-image-item">
               <img src="images/celeb_13.jpg">
               <dl>
-                <dt>CELEBRITY</dt>
-                <dd>Priyanka Chopra: “When I Was a Baby, I Was Already Blinged Out!”</dd>
+                <dt>Cinderella with a fluttering heart</dt>
+                <dd>Cinderella Arrives at the Ballroom</dd>
               </dl>
           </div>
           <div class="grid-image-item">
               <img src="images/celeb_14.jpg">
               <dl>
-                <dt>HOME</dt>
-                <dd>Jennifer Meyer’s Home Is Oh So California Cool</dd>
+                <dt>The wand of Fairy Godmother</dt>
+                <dd>Fairy Godmother to help Cinderella go to the ball</dd>
               </dl>
           </div>
           <div class="grid-image-item">
               <img src="images/celeb_15.jpg">
               <dl>
-                <dt>HOME &amp; DECORATING</dt>
-                <dd>The Obamas Purchase the Gorgeous D.C. Home They’ve Been Renting</dd>
+                <dt>Prince Facing Cinderella</dt>
+                <dd>First encounter with Cinderella in the forest</dd>
               </dl>
           </div>
           <div class="grid-image-item">
               <img src="images/celeb_16.jpg">
               <dl>
-                <dt>PEOPLE</dt>
-                <dd>Kristin Cavallari and Jay Cutler List Their Chicago Home for $4.7 Million</dd>
+                <dt>Prince and King</dt>
+                <dd>the prince's father's deathbed approaches</dd>
               </dl>
           </div>
           <div class="grid-image-item">
               <img src="images/celeb_17.jpg">
               <dl>
-                <dt>CELEBRITY</dt>
-                <dd>Kim Kardashian West Jumps on the Braless Bandwagon in N.Y.C. </dd>
+                <dt>Pumpkin wagon and Cinderella</dt>
+                <dd>Cinderella arrived at the ball in a pumpkin coach</dd>
               </dl>
           </div>
         </div>
       </div>
-      
     </article>
     <footer id="footerArea">
       <a href="#" class="topMove">Top</a>
@@ -201,13 +205,54 @@
       <p>© Disney © Disney•Pixar © & ™ Lucasfilm LTD © Marvel. All Rights Reserved.</p>
     </footer>
   </div>
+  <div id="mouse-cursor">
+    <div></div>
+  </div>
 <script src="./js/jquery-1.12.4.min.js"></script>
 <script src="./js/jquery-migrate-1.4.1.min.js"></script>
 <script src="js/masonry-docs.min.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/sub_visual.js"></script>
-<!-- <script src="js/masonry-docs.min.js"></script> -->
 <script>
+
+const cursor = document.getElementById('mouse-cursor');
+const mediaQuery = window.matchMedia('(min-width: 1280px)');
+
+let cursorX = 0, cursorY = 0;  //좌표
+
+function addMouseMoveListener() {
+  document.querySelector('.example__demo').addEventListener('mousemove', mousemove);
+  document.querySelector('.example__demo').addEventListener('mouseout', mouseout);
+}
+
+function removeMouseMoveListener() {
+  document.querySelector('.example__demo').removeEventListener('mouseout', mouseout);
+  document.querySelector('.example__demo').removeEventListener('mouseout', mouseout);
+}
+
+function mousemove(e) {
+  cursorX = e.pageX - cursor.offsetWidth / 2; // 마우스 커서 가운데 좌표
+  cursorY = e.pageY - cursor.offsetHeight / 2;
+  cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
+}
+
+function mouseout() {
+  cursor.style.transform = `translate3d(-100%, -100%, 0)`;
+}
+
+if (mediaQuery.matches) {  // 초기 화면에서 1280해상도 이상인지
+  addMouseMoveListener();
+} else {
+  removeMouseMoveListener();
+}
+
+mediaQuery.addListener(function(event) {  // 화면이 리사이징 될 때 처리
+  if (event.matches) {
+    addMouseMoveListener();
+  } else {
+    removeMouseMoveListener();
+  }
+});
 
 </script>
 </body>
