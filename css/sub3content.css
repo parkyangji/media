@@ -1,0 +1,63 @@
+/* 와이드 pc  */
+
+#imgBG {
+  display: block;
+  left: 50%;
+  right: inherit;
+  transform: translateX(-50%);
+}
+
+#content h2 {
+  position: absolute;
+  text-align: center;
+  top: -60vh;
+  left: 0;
+  width: 100%;
+  color: var(--point-color);
+  font-size: 10vh;
+  text-shadow: 6px 4px #000;
+}
+
+#content {
+  position: relative;
+  background: var(--back-color);
+  color: var(--text-color);
+}
+
+.intro {
+  padding: 9.38rem;
+  font-size: var(--text-size);
+  color: var(--point-color);
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 3px;
+}
+
+.intro p span {
+  display: block;
+  margin-top: 3vw;
+}
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+  
+  #content {
+    width: auto;
+  }
+  
+}
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+
+}
+
+/* 모바일 */
+@media screen and (max-width:640px){
+  
+}
