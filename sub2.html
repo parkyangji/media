@@ -61,9 +61,21 @@
     </header>
     <article id="content">
       <h2>character</h2>
+      <div class="intro">
+        <p>I WANT TO TELL YOU A SECRET THAT WILL SEE YOU THROUGH
+          ALL THE TRIALS THAT LIFE CAN OFFER: HAVE COURAGE AND BE KIND.
+          <span>—ELLA’S MOTHER</span>
+        </p>
+      </div>
       <section id="Ella">
         <div class="Main" data-bgcolor="#e6d3ac">
           <h3 class="h3">Ella</h3>
+          <div class="Main_img">
+            <img src="./images/sub2_1_3.jpg" alt="">
+          </div>
+          <div class="Main_img">
+            <img src="./images/sub2_1_2.jpg" alt="">
+          </div>
           <div class="Main_img">
             <img src="./images/sub2_1.jpg" alt="">
           </div>
@@ -93,7 +105,13 @@
 
       <section id="Kit">
         <div class="Main" data-bgcolor="#e6d3ac">
-          <h3>Kit</h3>
+          <h3 class="h3">Kit</h3>
+          <div class="Main_img">
+            <img src="./images/sub2_4_3.jpg" alt="">
+          </div>
+          <div class="Main_img">
+            <img src="./images/sub2_4_2.jpg" alt="">
+          </div>
           <div class="Main_img">
             <img src="./images/sub2_4.jpg" alt="">
           </div>
@@ -120,7 +138,13 @@
 
       <section id="Lady Tremaine">
         <div class="Main" data-bgcolor="#e6d3ac">
-          <h3>Lady Tremaine</h3>
+          <h3 class="h3">Lady Tremaine</h3>
+          <div class="Main_img">
+            <img src="./images/sub2_7_3.jpg" alt="">
+          </div>
+          <div class="Main_img">
+            <img src="./images/sub2_7_2.jpg" alt="">
+          </div>
           <div class="Main_img">
             <img src="./images/sub2_7.jpg" alt="">
           </div>
@@ -147,7 +171,13 @@
 
       <section id="Fairy Godmother">
         <div class="Main" data-bgcolor="#e6d3ac">
-          <h3>Fairy Godmother</h3>
+          <h3 class="h3">Fairy Godmother</h3>
+          <div class="Main_img">
+            <img src="./images/sub2_10_3.jpg" alt="">
+          </div>
+          <div class="Main_img">
+            <img src="./images/sub2_10_2.jpg" alt="">
+          </div>
           <div class="Main_img">
             <img src="./images/sub2_10.jpg" alt="">
           </div>
@@ -161,10 +191,14 @@
           </div>
           <div class="Sub_text">
             <span>CAST</span>
-            <p><span>Helena Bonham Carter as the Fairy Godmother,</span> a ditzy yet caring sorceress who helps Ella get to the ball.
+            <p><span>Helena Bonham Carter as the Fairy Godmother,</span> 
+              a ditzy yet caring sorceress who helps Ella get to the ball.
               She also serves as the film's narrator. Bonham Carter was announced to have been cast on June 20,
               2013. According to Simon Kinberg, she was the first choice for the role.
               Helena Bonham Carter is an actress of great versatility, one of the UK's finest and most successful.
+              she has received various awards and nominations, including a British Academy Film Award and an
+              International Emmy Award, in addition to nominations for two Academy Awards, four British Academy
+              Television Awards, five Primetime Emmy Awards, and nine Golden Globe Awards.
             </p>
           </div>
         </div>
@@ -215,7 +249,7 @@ function resizeWidth() {
 
     ScrollTrigger.create({
     trigger: Main,
-    start: "-200",
+    start: "-500",
     onEnter: () => {
       gsap.to(letter, { autoAlpha: 1, duration: 1, });
     },
@@ -234,7 +268,7 @@ function resizeWidth() {
     ScrollTrigger.create({
       trigger: colorSection,
     // scroller: colorSection,
-      start: "-500",
+      start: "-900",
       onEnter: () =>
         gsap.to(colorSection, {
           backgroundColor: colorSection.dataset.bgcolor,
