@@ -38,6 +38,49 @@
   margin-top: 3vw;
 }
 
+.Main {
+  display: grid;
+  grid-template-rows: .1fr 1fr;
+}
+
+.Main a {
+  width: 80%;
+  grid-column: 2/2;
+  grid-row: 2/2;
+  position: relative;
+  justify-self: flex-end;
+}
+
+.Main a img {
+  width: 100%;
+}
+
+.Main dl {
+  width: 40vw;
+  height: 25vw;
+  padding: 5vw 8vw 0vw 3vw;
+  box-sizing: border-box;
+  margin-left: 5vw;
+  grid-column: 1/3;
+  grid-row: 1/3;
+  background: var(--text-color-light);
+}
+
+.Main dl dt {
+  font-size: 3vw;
+  color: var(--point-color);
+  font-style: italic;
+  margin-bottom: 2vw;
+}
+
+.Main dl dd {
+  font-family: var(--sub-font);
+  font-size: 1.2vw;
+  color: var(--text-color);
+}
+
+
+
 /* 일반 pc */
 @media screen and (max-width:1280px) {
   
