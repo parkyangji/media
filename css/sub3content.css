@@ -38,6 +38,30 @@
   margin-top: 3vw;
 }
 
+#content i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8vw;
+  transition: color .5s;
+}
+
+#content a img {
+  transition: transform .5s;
+}
+
+
+#content a:not(.Sub .Sub_img a):hover img {
+  transform: scale(.95);
+}
+
+#content a:hover i {
+  color: red;
+}
+
+
+
 .Main {
   display: grid;
   grid-template-rows: .1fr 1fr;
@@ -75,23 +99,246 @@
 
 .Main dl dd {
   font-family: var(--sub-font);
-  font-size: 1.2vw;
-  color: var(--text-color);
+  font-size: 1.5vw;
+  color: hsl(229 0% 59% / 1);
 }
 
+.Sub {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.Sub .Sub_img:nth-of-type(1) {
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/4;
+  position: relative;
+  z-index: 10;
+  margin-left: 1.75vw;
+}
+
+.Sub .Sub_img:nth-of-type(2) {
+  width: 100%;
+  grid-column: 2/3;
+  grid-row: 2/5;
+  justify-self: flex-end;
+  margin-right: 1.75vw;
+}
+
+.Sub .Sub_img a {
+  position: relative;
+  overflow: hidden;
+}
+
+.Sub .Sub_img a:hover img {
+  transform: scale(1.1);
+}
+
+.Sub .Sub_img img {
+  width: 100%;
+}
+
+.Sub .Sub_img span {
+  display: block;
+  background: var(--text-color-light);
+  font-size: 2vw;
+  text-align: center;
+  font-style: italic;
+  color: var(--point-color);
+  padding: 2.5vw;
+}
+
+.Sub .Sub_text {
+  font-family: var(--sub-font);
+  grid-row: 3/5;
+  grid-column: 3/5;
+  text-align: end;
+  font-size: 1.5vw;
+  margin-right: 1.75vw;
+}
+
+
+#soundtrack {
+  overflow: hidden;
+}
+
+.Track {
+  margin: 9.38rem 0;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 62.5vw 1fr;
+  grid-gap: 2.5vw;
+}
+
+
+.Track img {
+  width: 100%;
+}
+
+.Track a {
+  grid-row: 1/3;
+  grid-column: 1/2;
+  position: relative;
+}
+
+.Track>span {
+  display: block;
+  width: 34.5vw;
+  height: 12.5vw;
+  margin-right: 10vw;
+  box-sizing: border-box;
+  background: var(--text-color-light);
+  text-align: center;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  justify-self: flex-end;
+  font-size: 2vw;
+  font-style: italic;
+  color: var(--point-color);
+  padding: 5vw 0;
+}
+
+.Track .Track_title {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  font-size: 2vw;
+  padding: 1vw;
+  box-sizing: border-box;
+  font-family: var(--sub-font);
+  color: var(--text-color-light);
+  align-self: center;
+}
+
+.Track .Track_title span {
+  display: block;
+  color: var(--text-color);
+}
 
 
 /* 일반 pc */
 @media screen and (max-width:1280px) {
   
-  #content {
-    width: auto;
-  }
+#content {
+  width: auto;
+}
   
 }
 
 /* 테블릿 */
 @media screen and (max-width:1024px) {
+
+.intro {
+  padding: 5.71rem;
+}
+
+.Main {
+  grid-template-rows: none;
+  padding: 1.75vw;
+}
+
+.Main a {
+  width: auto;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.Main a img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.Main dl {
+  width: auto;
+  height: auto;
+  padding: 5vw;
+  margin: 0;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.Main dl dt {
+  font-size: var(--sub-title-text-size);
+  margin-bottom: 5vw;
+}
+
+.Main dl dd {
+  font-size: var(--text-size);
+}
+
+.Sub {
+  grid-template-columns: none;
+  grid-template-rows: none;
+  padding: 1.75vw;
+}
+
+.Sub .Sub_img:nth-of-type(1) {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 85%;
+  margin: 0;
+  align-self: center;
+}
+
+.Sub .Sub_img:nth-of-type(2) {
+  grid-column: 3/4;
+  grid-row: 1/3;
+  justify-self: flex-end;
+  width: 85%;
+  margin: 0;
+  align-self: center;
+}
+
+.Sub .Sub_img span {
+  font-size: 2.5vw;
+  padding: 2.5vw;
+}
+
+.Sub .Sub_text {
+  grid-row: 1/3;
+  grid-column: 2/3;
+  text-align: center;
+  font-size: var(--text-size);
+  padding: 0;
+  margin: 0;
+  align-self: center;
+}
+
+
+
+.Track {
+  margin: 0;
+  gap: 0;
+  padding: 1.75vw;
+  grid-template-columns: 57.579vw 2fr 1fr;
+  grid-template-rows: none;
+}
+
+.Track a {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.Track img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.Track>span {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  width: auto;
+  height: auto;
+  font-size: 2.5vw;
+  margin-right: 0;
+  padding: 8vw 0;
+}
+
+.Track .Track_title {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  font-size: var(--text-size);
+}
 
 }
 
@@ -102,5 +349,10 @@
 
 /* 모바일 */
 @media screen and (max-width:640px){
-  
+
+.intro {
+  padding: 2rem;
+  font-size: calc(var(--text-size)/1.2);
+
+}
 }
