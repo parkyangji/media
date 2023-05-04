@@ -104,14 +104,18 @@
 
 .grid-image-item dl dt {
   transition: color .3s;
-  font-size: calc(var(--sub-title-text-size) / 2);
+  font-size: 1.5vw;
 }
 
 .grid-image-item dl dd {
   transition: color .3s;
   font-family: var(--sub-font);
-  font-size: calc(var(--text-size) / 1.5);
-  padding: 1rem;
+  font-size: 1.1vw;
+  padding: 1vw;
+}
+
+.grid:hover img {
+  filter: brightness(0.5);
 }
 
 .grid-image-item:hover img {
@@ -154,6 +158,15 @@
    width: 25%;
 }
 
+.grid-image-item dl dt {
+  font-size: var(--text-size);
+}
+
+.grid-image-item dl dd {
+  font-size: initial;
+  padding: 1vw;
+}
+
 }
 
 /* 소형 테블릿 */
@@ -176,6 +189,10 @@
 .grid-image-item,
 .grid--images .grid-sizer {
   width: 50%;
+}
+
+.grid-image-item dl dd {
+  padding: 2vw;
 }
 }
 
