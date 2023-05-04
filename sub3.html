@@ -12,6 +12,7 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/sub3content.css">
+  <link rel="stylesheet" href="./css/magnific-popup.css">
   <script src="https://kit.fontawesome.com/b0822c7a94.js" crossorigin="anonymous"></script>
   <script src="./js/prefixfree.min.js"></script>
   <script>
@@ -70,7 +71,7 @@
       <section id="trailer">
         <h3 class="hidden">trailer</h3>
         <div class="Main">
-          <a href="#"><img src="./images/sub3_1.jpg" alt=""><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.youtube.com/watch?v=LfR8Su4ulX0" class="popup-youtube"><img src="./images/sub3_1.jpg" alt=""><i class="fa-brands fa-youtube"></i></a>
           <dl>
             <dt>official trailer #1</dt>
             <dd>A new Frozen short, Frozen Fever, featuring all of your favorite characters and a brand new song, will
@@ -79,11 +80,11 @@
         </div>
         <div class="Sub">
           <div class="Sub_img">
-            <a href="#"><img src="./images/sub3_2.jpg" alt=""><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.youtube.com/watch?v=Rp26If-cBP4" class="popup-youtube"><img src="./images/sub3_2.jpg" alt=""><i class="fa-brands fa-youtube"></i></a>
             <span>official trailer #2</span>
           </div>
           <div class="Sub_img">
-            <a href="#"><img src="./images/sub3_3.jpg" alt=""><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.youtube.com/watch?v=z1dLcSoiHzA" class="popup-youtube"><img src="./images/sub3_3.jpg" alt=""><i class="fa-brands fa-youtube"></i></a>
             <span>official trailer #3</span>
           </div>
           <div class="Sub_text">
@@ -96,14 +97,14 @@
       <section id="soundtrack">
         <h3 class="hidden">sound track</h3>
         <div class="Track">
-          <a href="#"><img src="./images/sub3_4.jpg" alt=""><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.youtube.com/watch?v=5DQXfNIC39A" class="popup-youtube"><img src="./images/sub3_4.jpg" alt=""><i class="fa-brands fa-youtube"></i></a>
           <span>sound track #1</span>
           <div class="Track_title">
             <p>Lily James - A Dream is a Wish Your Heart Makes <span>(from Disney’s “Cinderella”)</span></p>
           </div>
         </div>
         <div class="Track">
-          <a href="#"><img src="./images/sub3_5.jpg" alt=""><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.youtube.com/watch?v=EMjrbd9lsbI" class="popup-youtube"><img src="./images/sub3_5.jpg" alt=""><i class="fa-brands fa-youtube"></i></a>
           <span>sound track #2</span>
           <div class="Track_title">
             <p>Sonna Rele - Strong <span>(from Disney’s “Cinderella”)</span></p>
@@ -125,12 +126,23 @@
   </div>
 <script src="./js/jquery-1.12.4.min.js"></script>
 <script src="./js/jquery-migrate-1.4.1.min.js"></script>
-<script src="js/masonry-docs.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/sub_visual.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
 <script>
 
+  $('.popup-youtube').magnificPopup({
+      disableOn: 320,
+      type: 'iframe',
+      mainClass: 'mfp-fade',
+      removalDelay: 160,
+      preloader: true,
+
+      fixedContentPos: false
+  });
 
 </script>
+    
 </body>
 </html>
