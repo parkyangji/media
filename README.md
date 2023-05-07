@@ -22,3 +22,8 @@ http://didwl214.cafe24.com/media/
 3. JS addEventListner 메소드를 이용하여 다양한 동적 UI 구현.
 4. JS matchMedia 메소드를 이용하여 반응형에 대응.
 4. 플러그인을 활용한 생산성 향상.
+
+<br>
+<br>
+
+*----2023.5.7 크로스 브라우징 테스트, scss 업그레이드 예정*
