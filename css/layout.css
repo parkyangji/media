@@ -1,4 +1,4 @@
-/* 와이드 pc  */
+/*========== 와이드pc ==========*/
 
 #logo_box {
   position: absolute;
@@ -16,6 +16,11 @@
   overflow: hidden;
   background: var(--back-color);
   color: var(--text-color);
+}
+
+section {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 #content h3 {
@@ -60,10 +65,11 @@
   transform: rotate(-2deg);
 }
 
-/*========== story ==========*/
+/* story */
 
 #story p {
-  padding: 2.5rem 3.13rem;
+  margin-top: 5rem;
+  padding: 0 3.13rem;
   font-family: var(--sub-font);
   font-size: var(--text-size);
   line-height: 2em;
@@ -74,11 +80,11 @@
   display: flex;
   gap: 3vw;
   justify-content: center;
+  padding: 3.13rem 3.13rem 0 3.13rem;
 }
 
 #story .story_img li {
   width: 33.33%;
-  max-width: 460px;
 }
 
 #story .story_img img {
@@ -95,7 +101,8 @@
   transform: rotate(-1deg);
 }
 
-/*========== shoes_box ==========*/
+/* shoes_box */
+
 .shoes_box {
   height: 55vw;
   overflow: hidden;
@@ -111,7 +118,7 @@
 }
 
 
-/*========== character ==========*/
+/* character */
 
 #character h3 {
   margin-top: 0;
@@ -120,14 +127,13 @@
 #character .character_img ul {
   display: flex;
   justify-content: space-evenly;
-  gap: 2vw;
+  gap: 3vw;
   transition: all .5s;
   margin-top: 5rem;
 }
 
 #character .character_img li {
   width: 25%;
-  max-width: 350px;
   position: relative;
   transition: all .5s;
 }
@@ -139,8 +145,8 @@
 
 #character .character_img dl dt {
   color: var(--text-color-light);
-  font-size: 2vw;
-  line-height: 2em;
+  font-size: min(var(--sub-title-text-size), 2vw);
+  line-height: 3em;
   text-align: center;
 }
 
@@ -153,6 +159,7 @@
   left: 0;
   bottom: 40%;
   opacity: 0;
+  padding: 0 3.13rem;
   transition: all .3s;
 }
 
@@ -169,7 +176,7 @@
 }
 
 
-/*========== trailer ==========*/
+/* trailer */
 
 #trailer .main_trailer {
   display: flex;
@@ -183,7 +190,7 @@
 #trailer img {
   width: 100%;
   height: 100%;
-  object-fit: cover
+  object-fit: cover;
 }
 
 #trailer dl {
@@ -212,11 +219,11 @@
   display: flex;
   justify-content: space-around;
   gap: 3vw;
+  padding: 0 3.13rem;
 }
 
 #trailer .sub_trailer li {
   width: 25%;
-  max-width: 270px;
 }
 
 #trailer .main_trailer a,
@@ -229,7 +236,7 @@
   transform: scale(.95);
 }
 
-/*========== gallery ==========*/
+/* gallery */
 
 #gallery {
   margin-bottom: 9.38rem;
@@ -238,14 +245,13 @@
 #gallery ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1vw;
   grid-template-areas:
     "a a a"
     "b c c"
     "d d g"
     "e f g";
   margin-top: 5rem;
-  padding: 0 3.13rem;
 }
 
 #gallery ul li:nth-of-type(1) {
@@ -293,28 +299,25 @@
 
 
 
-/* 일반 pc */
+/*========== 일반 pc ==========*/
 @media screen and (max-width:1280px) {
 
 #content {
-  width: 96%;
   padding: 0 2%;
 }
 
 }
 
 
-/* 테블릿 */
+/*========== 태블릿 ==========*/
 @media screen and (max-width:1024px) {
 
 #logo_box {
   display: none;
 }
 
-#content{ width:auto; margin:0; }
-
 #content h3 {
-  margin-top: 6rem;
+  margin-top: 5.71rem;
   font-size: var(--title-text-size);
 }
 
@@ -328,7 +331,7 @@
 
 
 
-/*========== story ==========*/
+/* story */
 
 #story .story_img li:nth-of-type(1) {display: none;}
 #story .story_img li:nth-of-type(2) {display: none;}
@@ -337,6 +340,7 @@
   margin-bottom: 4rem;
 }
 #story p {
+  margin: 0;
   font-size: var(--text-size);
   float: right;
   width: 50%;
@@ -352,6 +356,10 @@
   text-align: initial;
 }
 
+#story .story_img ul {
+  padding: 0;
+}
+
 #story .story_img li {
   width: auto;
   max-width: none;
@@ -361,7 +369,7 @@
   clear: both;
 }
 
-/*========== character ==========*/
+/* character */
 
 #character .character_img ul {
   flex-wrap: wrap;
@@ -397,10 +405,11 @@
   font-size: var(--text-size);
   text-align: initial;
   position: static;
+  padding: 0;
 }
 
 
-/*========== trailer ==========*/
+/* trailer */
 
 #trailer .main_trailer a {
   width: 50%;
@@ -439,11 +448,15 @@
   box-sizing: border-box;
   display: -webkit-box;
   word-wrap: break-word;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
   max-height: 180px;
+}
+
+#trailer .sub_trailer ul {
+  padding: 0;
 }
 
 #trailer .sub_trailer {
@@ -462,7 +475,7 @@
 
 
 
-/*========== gallery ==========*/
+/* gallery */
 
 #gallery {
   margin-bottom: 6rem;
@@ -475,7 +488,6 @@
     "d c c"
     "b e f";
   margin-top: 4rem;
-  padding: 0 1rem;
 }
 
 #gallery ul li:nth-of-type(1) {
@@ -509,7 +521,7 @@
 
 }
 
-/* 소형 테블릿 */
+/*========== 소형 태블릿 ==========*/
 @media screen and (max-width:768px) {
   #content .btn {
     letter-spacing: 25px;
@@ -525,8 +537,12 @@
   }
 }
 
-/* 모바일 */
+/*========== 모바일 ==========*/
 @media screen and (max-width:640px) {
+
+#content {
+  padding: 0 1rem;
+}  
 
 #content h3 {
   font-size: var(--title-text-size);
@@ -538,7 +554,7 @@
 }
 
 
-/*========== story ==========*/
+/* story */
 
 #story h3 {
   margin-bottom: 0;
@@ -549,12 +565,12 @@
   width: auto;
   text-align: justify;
   float: none;
-  max-height: 220px;
+  max-height: 218px;
+  padding: 1rem;
 }
 
 #story .story_img li {
   width: 100%;
-  max-width: 460px;
 }
 
 #story .story_img img {
@@ -562,7 +578,7 @@
   object-fit: cover;
 }
 
-/*========== character ==========*/
+/* character */
 
 #character .character_img dl dt {
   font-size: var(--sub-title-text-size);
@@ -595,7 +611,7 @@
 }
 
 
-/*========== trailer ==========*/
+/* trailer */
 
 #trailer .main_trailer {
   flex-direction: column;
@@ -626,7 +642,7 @@
   display: none;
 }
 
-/*========== trailer ==========*/
+/* gallery */
 
 #gallery {
   margin-bottom: 3rem;

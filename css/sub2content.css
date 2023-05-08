@@ -44,7 +44,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5vw;
-  padding: 10vw;
+  padding: 0 10vw;
 }
 
 .Main h3 {
@@ -88,17 +88,17 @@
 
 
 .Sub {
-  /* height: 100vh; */
-  /* min-height: 1000px; */
+  max-width: 1920px;
+  margin: 0 auto;
   display: grid;
   grid-template-rows: minmax(auto, 12vw) auto auto;
-  grid-template-columns: minmax(auto, 15vw) minmax(auto, 8vw) auto;
-  padding: 6.25rem;
+  grid-template-columns: minmax(auto, 14vw) auto;
+  column-gap: 5vw;
+  padding: 10vw;
 }
 
 .Sub .Sub_img:nth-of-type(1) {
-  max-width: 200px;
-  grid-column: 3/4;
+  grid-column: 2/3;
   grid-row: 1/2;
   overflow: hidden;
   justify-self: right;
@@ -120,7 +120,7 @@
 }
 
 .Sub .Sub_text {
-  grid-column: 3/4;
+  grid-column: 2/3;
   grid-row: 2/4;
 }
 
@@ -146,25 +146,19 @@
 /* 일반 pc */
 @media screen and (max-width:1280px) {
   
-#content {
-  width: auto;
-}
+
 }
 
 /* 테블릿 */
 @media screen and (max-width:1024px) {
-#content{ 
-  width:auto; 
-  margin:0; 
-  /* padding-top: 5.71rem; */
-}
 
 .intro {
-  padding: 5.71rem;
+  padding: 5.71rem 2%;
 }
 
 
 .Main {
+  padding: 10vw;
 }
 
 .Main h3 {
@@ -193,11 +187,10 @@
 
 
 .Sub {
-  /* min-height: 800px; */
-  padding: calc(6.25rem / 2);
+  padding: 5.71rem 2%;
   grid-template-columns: 1.5fr .4fr .4fr;
-  grid-template-rows: .1fr 1fr .5fr;
-  
+  grid-template-rows: .2fr 1fr .5fr;
+  column-gap: 0;
 }
 
 .Sub .Sub_img:nth-of-type(1) {
