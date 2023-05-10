@@ -18,9 +18,10 @@ http://didwl214.cafe24.com/media/
 1. 최신 CSS display: grid, flex를 적극 활용한 레이아웃 구성.
 
 ## 🪄 자바스크립트 구현 기능
-1. JS addEventListner 메소드를 이용하여 다양한 동적 UI 구현.
-2. JS matchMedia 메소드를 이용하여 반응형에 대응.
-3. 플러그인을 활용한 생산성 향상.
+1. JS addEventListner 메소드를 이용하여 다양한 동적 UI 구현
+2. JS matchMedia 메소드를 이용하여 반응형에 대응
+3. pageX,Y 좌표에 따른 마우스 커스터 마이징
+4. 플러그인을 활용한 생산성 향상
 
 <br>
 <br>
