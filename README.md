@@ -5,25 +5,24 @@
 ## 🔗 URL
 http://didwl214.cafe24.com/media/
 
-
 ## ⚒️ STACKS
 * HTML
 * CSS
 * JS
-  + Vanila JS 95%, Jquery 5%
-* JS Plugin
-  + GASP scrolltrigger [모든 페이지]
+* 플러그인
+  + GASP scrolltrigger [story, character]
   + Masonry [gallery]
   + Magnific_popup [trailer]
 
-## 🪄 SUMMARY
-1. HTML5 태그를 이용하여 시맨틱태그 구현.
-2. 최신 CSS display: grid, flex를 적극 활용한 레이아웃 구성.
-3. JS addEventListner 메소드를 이용하여 다양한 동적 UI 구현.
-4. JS matchMedia 메소드를 이용하여 반응형에 대응.
-4. 플러그인을 활용한 생산성 향상.
+## 🌈 UI/UX
+1. 최신 CSS display: grid, flex를 적극 활용한 레이아웃 구성.
+
+## 🪄 자바스크립트 구현 기능
+1. JS addEventListner 메소드를 이용하여 다양한 동적 UI 구현.
+2. JS matchMedia 메소드를 이용하여 반응형에 대응.
+3. 플러그인을 활용한 생산성 향상.
 
 <br>
 <br>
 
-*----2023.5.7 크로스 브라우징 테스트, scss 업그레이드 예정*
+*----2023.5.7~  scss 업그레이드 예정*
