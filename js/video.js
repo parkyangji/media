@@ -2,10 +2,10 @@
 let current=false;
 
 function screen_size(){
-  screenHeight = window.innerHeight;
-  screenSize = window.innerWidth;
+  screenHeight = $(window).height();
+  screenSize = $(window).width();
 
-  content.style.marginTop = `${screenHeight}px`;
+  $("#content").css('margin-top',screenHeight);
   
   if( screenSize > 1024 && current==false){
       videoBG.style.display = 'block';
@@ -25,6 +25,8 @@ function screen_size(){
 
 screen_size();  //최초 실행시 호출
   
-window.addEventListener('resize', screen_size);
+window.addEventListener('resize', function() {
+  screen_size();
+});
 
 

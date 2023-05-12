@@ -13,8 +13,8 @@ function getParams() {
 let pageNum = getParams(); // 페이지 수 뽑기
 
 function screen_size(){
-  screenHeight = window.innerHeight;
-  screenSize = window.innerWidth;
+  screenHeight = $(window).height();
+  screenSize = $(window).width();
 
   content.style.marginTop = `${screenHeight}px`;
     
@@ -28,5 +28,7 @@ function screen_size(){
 
 screen_size();  //최초 실행시 호출
 
-window.addEventListener('resize', screen_size);
+window.addEventListener('resize', function() {
+  screen_size();
+});
 

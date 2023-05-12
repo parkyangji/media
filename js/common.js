@@ -12,15 +12,15 @@ let screenSize, screenHeight;
 document.querySelector('.scrollDown').addEventListener('click', function(e) {
   e.preventDefault();
 
-  screenHeight = window.innerHeight;
+  screenHeight = $(window).height();
   window.scrollTo({top:screenHeight, left:0, behavior:"smooth"});
 })
 
 // 헤더 변경
 
 window.addEventListener('scroll', function() {
-  screenHeight = window.innerHeight;
-  screenSize = window.innerWidth;
+  screenHeight = $(window).height();
+  screenSize = $(window).width();
 
   let scroll = window.scrollY;
 
