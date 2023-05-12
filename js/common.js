@@ -1,46 +1,50 @@
+// 공통 변수
+const videoBG = document.getElementById('videoBG'),
+      imgBG = document.getElementById('imgBG'),
+      headerArea = document.getElementById('headerArea'),
+      content = document.getElementById('content');
+
+let screenSize, screenHeight;
+
+
 // 스크롤 다운
-  
-$('.scrollDown').click(function(){
-  screenHeight = $(window).height();
-  $('html,body').animate({'scrollTop':screenHeight}, 1000);
-});
+
+document.querySelector('.scrollDown').addEventListener('click', function(e) {
+  e.preventDefault();
+
+  screenHeight = window.innerHeight;
+  window.scrollTo({top:screenHeight, left:0, behavior:"smooth"});
+})
 
 // 헤더 변경
 
-$(window).on('scroll', function() {
-  screenHeight = $(window).height();
-  screenSize = $(window).width();
+window.addEventListener('scroll', function() {
+  screenHeight = window.innerHeight;
+  screenSize = window.innerWidth;
 
-  let scroll = $(window).scrollTop();
+  let scroll = window.scrollY;
 
-  if (screenSize > 1024) {
-
-    if (scroll >= screenHeight) {
-      $('#headerArea').css('background-color', 'var(--back-color)');
-    } else if (scroll < screenHeight){
-      $('#headerArea').css('background-color', 'transparent');
-    }
-
+  if (scroll >= screenHeight) {
+    headerArea.style.backgroundColor = 'var(--back-color)';
   } else {
-    if (scroll >= screenHeight) {
-      $('#headerArea').css('background-color', 'var(--back-color)');
-    } else if (scroll < screenHeight){
-      $('#headerArea').css('background-color', 'transparent');
-    }
+    headerArea.style.backgroundColor = 'transparent';
   }
-
-
 })
 
 // 상단 이동
-$('.topMove').click(function(e){
-  e.preventDefault(); 
-  $("html,body").stop().animate({"scrollTop":0},1000);
-});
+
+document.querySelector('.topMove').addEventListener('click', function(e) {
+  e.preventDefault();
+
+  const scrollTop = document.body.offsetTop;
+  window.scrollTo({top:scrollTop, behavior:"smooth"});
+})
 
 
 // 네비
-$('.menuOn').click(function(e){
+
+document.querySelector('.menuOn').addEventListener('click', function(e){
   e.preventDefault();
-  $('#headerArea').toggleClass('active');
+
+  headerArea.classList.toggle('active');
 })

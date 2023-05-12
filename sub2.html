@@ -222,67 +222,6 @@
 <script src="./js/sub_visual.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-<script>
-
-
-gsap.registerPlugin(ScrollTrigger);
-
-function resizeWidth() {
-
-  const sectionHeight = document.querySelector('.Main').offsetHeight;
-
-  gsap.utils.toArray(".Main").forEach((Main, i) => {
-
-    // //스크롤 고정
-    // ScrollTrigger.create({
-    //   trigger: Main,
-    //   start: "top", 
-    //  // end: `+=${sectionHeight*2}`,
-    //   pin: true,
-    // });
-
-    //문구
-    const letter = document.querySelectorAll('.Main')[i].children[0];
-
-    gsap.set(letter, { autoAlpha: 0 });
-
-    ScrollTrigger.create({
-    trigger: Main,
-    start: "-500",
-    onEnter: () => {
-      gsap.to(letter, { autoAlpha: 1, duration: 1, });
-    },
-  });
-
-  });
-
-  //배경색 바꾸기
-
-  const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
-
-  scrollColorElems.forEach((colorSection, i) => {
-    const prevBg = '#0a1239';
-    //const prevText = i === 0 ? "" : scrollColorElems[i - 1].dataset.textcolor;
-
-    ScrollTrigger.create({
-      trigger: colorSection,
-    // scroller: colorSection,
-      start: "-900",
-      onEnter: () =>
-        gsap.to(colorSection, {
-          backgroundColor: colorSection.dataset.bgcolor,
-        // color: colorSection.dataset.textcolor,
-          overwrite: "auto"
-        })
-    });
-  });
-
-
-window.addEventListener("resize", ScrollTrigger.update);
-}
-
-resizeWidth();
-
-</script>
+<script src="./js/sub2.js"></script>
 </body>
 </html>

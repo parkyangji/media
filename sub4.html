@@ -212,47 +212,6 @@
 <script src="js/masonry-docs.min.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/sub_visual.js"></script>
-<script>
-
-const cursor = document.getElementById('mouse-cursor');
-const mediaQuery = window.matchMedia('(min-width: 1280px)');
-
-let cursorX = 0, cursorY = 0;  //좌표
-
-function addMouseMoveListener() {
-  document.querySelector('.example__demo').addEventListener('mousemove', mousemove);
-  document.querySelector('.example__demo').addEventListener('mouseout', mouseout);
-}
-
-function removeMouseMoveListener() {
-  document.querySelector('.example__demo').removeEventListener('mousemove', mousemove);
-  document.querySelector('.example__demo').removeEventListener('mouseout', mouseout);
-}
-
-function mousemove(e) {
-  cursorX = e.pageX - cursor.offsetWidth / 2; // 마우스 커서 가운데 좌표
-  cursorY = e.pageY - cursor.offsetHeight / 2;
-  cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
-}
-
-function mouseout() {
-  cursor.style.transform = `translate3d(-100%, -100%, 0)`;
-}
-
-if (mediaQuery.matches) {  // 초기 화면에서 1280해상도 이상인지
-  addMouseMoveListener();
-} else {
-  removeMouseMoveListener();
-}
-
-mediaQuery.addListener(function(event) {  // 화면이 리사이징 될 때 처리
-  if (event.matches) {
-    addMouseMoveListener();
-  } else {
-    removeMouseMoveListener();
-  }
-});
-
-</script>
+<script src="./js/sub4.js"></script>
 </body>
 </html>

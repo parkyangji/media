@@ -202,7 +202,8 @@ dd {
   height: 130px;
   left: 0;
   top: 0;
-  width: 100%
+  width: 100%;
+  transition: background-color .3s;
 }
 
 #headerArea .headerInner {
@@ -426,12 +427,14 @@ dd {
 @media screen and (max-width:1024px) {
 
 
-#headerArea .menuOn{display: block;}
+#headerArea .menuOn{
+  display: block;
+}
 
 #headerArea {
   height: 80px;
 }
-
+s
 #headerArea h1 {
   display: block;
 }
@@ -442,6 +445,7 @@ dd {
 
 
 #headerArea #gnb {
+  transition: right .3s;
   display: block;
   position: fixed;
   right: -100%;

@@ -12,24 +12,21 @@ function getParams() {
 
 let pageNum = getParams(); // 페이지 수 뽑기
 
-let screenSize, screenHeight;
-
 function screen_size(){
-    screenSize = $(window).width(); //스크린의 너비
-    screenHeight = $(window).height();  //스크린의 높이
+  screenHeight = window.innerHeight;
+  screenSize = window.innerWidth;
 
-    $("#content").css('margin-top',screenHeight);
+  content.style.marginTop = `${screenHeight}px`;
     
     if( screenSize > 1024){
-        $("#imgBG").attr("src", `./images/sub${pageNum}_main1.jpg`);
+      imgBG.src = `./images/sub${pageNum}_main1.jpg`;
       }
     if(screenSize <= 1024){
-      $("#imgBG").attr("src", `./images/sub${pageNum}_main2.jpg`);
+      imgBG.src = `./images/sub${pageNum}_main2.jpg`;
     }
 }
 
 screen_size();  //최초 실행시 호출
 
-$(window).resize(function(){ 
-    screen_size();
-}); 
+window.addEventListener('resize', screen_size);
+
