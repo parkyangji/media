@@ -17,7 +17,7 @@ function resizeWidth() {
 
     ScrollTrigger.create({
       trigger: Main,
-      start: "top top",
+      start: "top center",
       onEnter: () => {
         gsap.to(letter, {
           autoAlpha: 1,
@@ -36,7 +36,7 @@ function resizeWidth() {
 
     ScrollTrigger.create({
       trigger: colorSection,
-      start: "top center",
+      start: "-100 bottom",
       onEnter: () =>
         gsap.to(colorSection, {
           backgroundColor: colorSection.dataset.bgcolor,
