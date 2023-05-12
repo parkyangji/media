@@ -9,6 +9,7 @@ http://didwl214.cafe24.com/media/
 * HTML
 * CSS
 * JS
+  * Vanila Js 100%
 * 플러그인
   + GASP scrolltrigger [story, character]
   + Masonry [gallery]
