@@ -352,7 +352,7 @@ dd {
 }
 
 #videoBG {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   width: auto;
@@ -364,7 +364,7 @@ dd {
 }
 
 #imgBG {
-  position: absolute;
+  position: fixed;
   right: -10%;
   top: 0;
   width: auto;
