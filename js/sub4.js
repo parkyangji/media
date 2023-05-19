@@ -31,11 +31,3 @@ if (mediaQuery.matches) { // 초기 화면에서 1280해상도 이상인지
 } else {
   removeMouseMoveListener();
 }
-
-mediaQuery.addEventListener(function (event) { // 화면이 리사이징 될 때 처리
-  if (event.matches) {
-    addMouseMoveListener();
-  } else {
-    removeMouseMoveListener();
-  }
-});
