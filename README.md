@@ -4,7 +4,7 @@
 5 Pages(index, story, character, trailer, gallery)
 
 ## 🔗 URL
-http://didwl214.cafe24.com/media/
+http://didwl214.mycafe24.com/media/
 
 ## ⚒️ STACKS
 * HTML
